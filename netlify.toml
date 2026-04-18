@@ -1,6 +1,11 @@
 [build]
   publish = "."
   command = "echo 'Static site'"
+  edge_functions = "netlify/edge-functions"
+
+[[edge_functions]]
+  function = "track-visitor"
+  path = "/*"
 
 [[headers]]
   for = "/*"
