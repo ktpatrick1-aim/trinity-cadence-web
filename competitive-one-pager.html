@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Cadence — Competitive Positioning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1a1a2e;
+      background: #ffffff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 9pt;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #7C3AED;
+    }
+
+    .header-left h1 {
+      font-size: 18pt;
+      font-weight: 800;
+      color: #7C3AED;
+      letter-spacing: -0.02em;
+      margin-bottom: 2px;
+    }
+
+    .header-left p {
+      font-size: 9pt;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 8pt;
+      color: #64748b;
+    }
+
+    .header-right strong {
+      color: #1a1a2e;
+      display: block;
+      font-size: 9pt;
+    }
+
+    /* Tagline */
+    .tagline {
+      text-align: center;
+      padding: 12px 0;
+      margin-bottom: 16px;
+      background: #f5f3ff;
+      border-radius: 6px;
+      font-size: 10pt;
+      font-weight: 600;
+      color: #5B21B6;
+    }
+
+    /* Two Column Layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* Section Headers */
+    .section-label {
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #7C3AED;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #1a1a2e;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin-bottom: 16px;
+    }
+
+    .comparison-table th {
+      background: #1a1a2e;
+      color: #ffffff;
+      padding: 6px 8px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-table th.cadence-col {
+      background: #7C3AED;
+    }
+
+    .comparison-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .comparison-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .comparison-table .feature-label {
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .comparison-table .yes {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    .comparison-table .no {
+      color: #94a3b8;
+    }
+
+    .comparison-table .highlight {
+      color: #7C3AED;
+      font-weight: 700;
+    }
+
+    /* Differentiators */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .diff-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      border-left: 3px solid #7C3AED;
+    }
+
+    .diff-card h3 {
+      font-size: 9pt;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: #1a1a2e;
+    }
+
+    .diff-card p {
+      font-size: 8pt;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    /* Pricing Box */
+    .pricing-box {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
+
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-size: 8.5pt;
+    }
+
+    .pricing-row.header-row {
+      font-weight: 700;
+      border-bottom: 1px solid #ddd6fe;
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-highlight {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    .pricing-muted {
+      color: #94a3b8;
+    }
+
+    /* Integrator Callout */
+    .integrator-callout {
+      background: #1a1a2e;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+    }
+
+    .integrator-callout h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #a78bfa;
+    }
+
+    .integrator-callout p {
+      font-size: 8.5pt;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .integrator-callout .math {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #334155;
+    }
+
+    .integrator-callout .math-item {
+      text-align: center;
+    }
+
+    .integrator-callout .math-item .value {
+      font-size: 14pt;
+      font-weight: 800;
+    }
+
+    .integrator-callout .math-item .label {
+      font-size: 7pt;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .math-item .value.competitor { color: #94a3b8; text-decoration: line-through; }
+    .math-item .value.cadence { color: #34d399; }
+    .math-item .value.savings { color: #fbbf24; }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 8pt;
+      color: #94a3b8;
+    }
+
+    .footer-cta {
+      text-align: right;
+    }
+
+    .footer-cta a {
+      display: inline-block;
+      background: #7C3AED;
+      color: #ffffff;
+      padding: 6px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 8pt;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .integrator-callout { background: #1a1a2e !important; }
+      .comparison-table th { background: #1a1a2e !important; }
+      .comparison-table th.cadence-col { background: #7C3AED !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left" style="display:flex; align-items:center; gap:12px;">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:40px; height:40px;">
+        <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+      </svg>
+      <div>
+        <h1>Trinity Cadence</h1>
+        <p>The AI-Native Operating System for Business Cadence</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <strong>trinityoneconsulting.com/cadence</strong>
+      kevin@trinityoneconsulting.com<br>
+      A product of Trinity One Consulting
+    </div>
+  </div>
+
+  <div class="tagline">Forge the business. Calibrate the systems. Run the Cadence.</div>
+
+  <!-- Competitive Comparison Table -->
+  <div class="section-label">Competitive Comparison</div>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th style="width:25%;">Capability</th>
+        <th class="cadence-col" style="width:25%;">Trinity Cadence</th>
+        <th style="width:16%;">Ninety.io</th>
+        <th style="width:16%;">Bloom Growth</th>
+        <th style="width:18%;">Traction Tools</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="feature-label">Built by</td>
+        <td class="highlight">Active Integrator</td>
+        <td>Software company</td>
+        <td>Software company</td>
+        <td>Software company</td>
+      </tr>
+      <tr>
+        <td class="feature-label">AI coaching</td>
+        <td class="yes">Native (6 features)</td>
+        <td class="no">Limited / bolt-on</td>
+        <td class="no">None</td>
+        <td class="no">None</td>
+      </tr>
+      <tr>
+        <td class="feature-label">AI anomaly detection</td>
+        <td class="yes">Built-in</td>
+        <td class="no">No</td>
+        <td class="no">No</td>
+        <td class="no">No</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Integrator pricing</td>
+        <td class="highlight">Flat rate $49-$199/mo</td>
+        <td>Per-seat per org</td>
+        <td>Per-seat per org</td>
+        <td>Per-seat per org</td>
+      </tr>
+      <tr>
+        <td class="feature-label">People/Dream mgmt</td>
+        <td class="yes">DreamCompass integration</td>
+        <td class="no">None</td>
+        <td class="no">None</td>
+        <td class="no">None</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Playbook templates</td>
+        <td class="yes">16 (ITIL, SCOR, PMI, SHRM)</td>
+        <td>Generic</td>
+        <td>Generic</td>
+        <td>Generic</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Trademark freedom</td>
+        <td class="yes">Proprietary vocabulary</td>
+        <td>Licensed terms</td>
+        <td>Licensed terms</td>
+        <td>Licensed terms</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Design approach</td>
+        <td class="highlight">Linear meets Notion</td>
+        <td>Functional</td>
+        <td>Functional</td>
+        <td>Dated</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Key Differentiators -->
+  <div class="section-label">Why Trinity Cadence</div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <h3>AI-Native, Not AI-Bolted-On</h3>
+      <p>Monday Briefings, coaching, anomaly detection, issue clustering, SMART Anchor drafting, and Huddle summaries. Built into every workflow from day one.</p>
+    </div>
+    <div class="diff-card">
+      <h3>Built by an Active Integrator</h3>
+      <p>Kevin Patrick uses Trinity Cadence with his own clients every Monday. Every feature solves a real problem from a real leadership meeting.</p>
+    </div>
+    <div class="diff-card">
+      <h3>The Human + Machine Equation</h3>
+      <p>The only platform combining operational cadence with DreamCompass people development. AI optimizes operations. Dream Manager optimizes people.</p>
+    </div>
+    <div class="diff-card">
+      <h3>Industry-Grounded Playbooks</h3>
+      <p>16 process templates cited to ITIL 4, SCOR, PMI PMBOK, SHRM, APQC, and ASCM. Real operational standards, not generic checklists.</p>
+    </div>
+  </div>
+
+  <!-- Integrator Pricing Callout -->
+  <div class="integrator-callout">
+    <h3>For Integrators: The Flat-Rate Advantage</h3>
+    <p>Every other platform charges per-seat across every client org you manage. Trinity Cadence charges one flat monthly fee for unlimited seat access across all your clients.</p>
+    <div class="math">
+      <div class="math-item">
+        <div class="value competitor">~$1,600</div>
+        <div class="label">Per-seat tool (10 orgs)</div>
+      </div>
+      <div class="math-item">
+        <div class="value cadence">$199</div>
+        <div class="label">Trinity Cadence (10 orgs)</div>
+      </div>
+      <div class="math-item">
+        <div class="value savings">87% savings</div>
+        <div class="label">Your monthly savings</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Summary -->
+  <div class="section-label">Pricing</div>
+  <div class="pricing-box">
+    <div class="pricing-row header-row">
+      <span>Plan</span>
+      <span>Monthly</span>
+      <span>Annual (save 20%)</span>
+    </div>
+    <div class="pricing-row">
+      <span>Cadence (per user)</span>
+      <span>$16/user/mo</span>
+      <span class="pricing-highlight">$12.80/user/mo</span>
+    </div>
+    <div class="pricing-row">
+      <span>Cadence Pro (per user)</span>
+      <span>$24/user/mo</span>
+      <span class="pricing-highlight">$19.20/user/mo</span>
+    </div>
+    <div class="pricing-row" style="border-top:1px solid #ddd6fe; padding-top:6px; margin-top:4px;">
+      <span>Fractional Starter (up to 3 orgs)</span>
+      <span>$49/mo flat</span>
+      <span class="pricing-muted">-</span>
+    </div>
+    <div class="pricing-row">
+      <span>Fractional Professional (up to 8 orgs)</span>
+      <span>$99/mo flat</span>
+      <span class="pricing-muted">-</span>
+    </div>
+    <div class="pricing-row">
+      <span>Fractional Practice (9+ orgs)</span>
+      <span>$199/mo flat</span>
+      <span class="pricing-muted">-</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      Trinity Cadence &mdash; A product of Trinity One Consulting<br>
+      14-day free trial. No credit card required.
+    </div>
+    <div class="footer-cta">
+      <a href="https://trinityoneconsulting.com/cadence">trinityoneconsulting.com/cadence</a>
+    </div>
+  </div>
+
+</body>
+</html>

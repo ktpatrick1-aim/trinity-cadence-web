@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity Cadence — Sales Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: landscape;
+    margin: 0.5in;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    font-family: 'Inter', sans-serif;
+    background: #0F0A1A;
+    color: #FFFFFF;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    page-break-after: always;
+    background: #0F0A1A;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Subtle gradient overlay for depth */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(124, 58, 237, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .slide > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #7C3AED;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #A78BFA;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #E0E0E0;
+    margin-bottom: 0.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: #A78BFA;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #C4B5FD;
+    font-style: italic;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  ul li {
+    padding: 0.45rem 0 0.45rem 1.6rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #E0E0E0;
+    line-height: 1.5;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 8px;
+    height: 8px;
+    background: #7C3AED;
+    border-radius: 50%;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+
+  thead th {
+    background: #7C3AED;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid rgba(124, 58, 237, 0.4);
+  }
+
+  tbody td {
+    padding: 10px 14px;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    color: #E0E0E0;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: rgba(124, 58, 237, 0.08);
+  }
+
+  tbody tr:nth-child(even) {
+    background: rgba(15, 10, 26, 0.9);
+  }
+
+  /* Accent elements */
+  .accent {
+    color: #7C3AED;
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background: rgba(124, 58, 237, 0.1);
+    border-left: 4px solid #7C3AED;
+    padding: 1rem 1.4rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .quote {
+    font-style: italic;
+    color: #C4B5FD;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-left: 3px solid #7C3AED;
+    background: rgba(124, 58, 237, 0.06);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .bottom-note {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #A78BFA;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 3.5rem;
+    right: 3.5rem;
+    font-size: 0.7rem;
+    color: rgba(167, 139, 250, 0.5);
+    border-top: 1px solid rgba(124, 58, 237, 0.15);
+    padding-top: 0.5rem;
+  }
+
+  /* Title slide centering */
+  .slide-title {
+    align-items: center;
+    text-align: center;
+  }
+
+  .slide-title h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Contact slide centering */
+  .slide-contact {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Two-column layout */
+  .two-col {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .two-col .col {
+    flex: 1;
+  }
+
+  /* Pricing cards */
+  .pricing-card {
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .pricing-card h3 {
+    margin-bottom: 0.3rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #7C3AED;
+    margin-bottom: 0.2rem;
+  }
+
+  .price-sub {
+    font-size: 0.8rem;
+    color: #A78BFA;
+    margin-bottom: 0.6rem;
+  }
+
+  .pricing-card ul li {
+    font-size: 0.82rem;
+    padding: 0.25rem 0 0.25rem 1.4rem;
+  }
+
+  .pricing-card ul li::before {
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Three-column layout */
+  .three-col {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .three-col .col {
+    flex: 1;
+  }
+
+  /* Getting started steps */
+  .step {
+    background: rgba(124, 58, 237, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+  }
+
+  .step-number {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #7C3AED;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Template chips */
+  .template-section {
+    margin-bottom: 0.8rem;
+  }
+
+  .template-section h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .template-list {
+    font-size: 0.82rem;
+    color: #D4D0DC;
+    line-height: 1.7;
+  }
+
+  .template-list span {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin: 0.15rem 0.15rem;
+    font-size: 0.78rem;
+  }
+
+  /* Triquetra logo */
+  .logo-triquetra {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Bold table cells */
+  td strong, td b {
+    color: #C4B5FD;
+    font-weight: 600;
+  }
+
+  @media print {
+    .slide {
+      min-height: auto;
+      height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- SLIDE 1 — Title -->
+<!-- ============================================= -->
+<div class="slide slide-title">
+  <div class="logo-triquetra">
+    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100" fill="none">
+      <!-- Triquetra knot -->
+      <path d="M50 10
+        C 35 10, 20 25, 20 40
+        C 20 55, 35 65, 50 75
+        C 65 65, 80 55, 80 40
+        C 80 25, 65 10, 50 10Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <path d="M50 75
+        C 35 65, 15 70, 12 82
+        C 9 94, 25 100, 38 95
+        C 51 90, 50 75, 50 75Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <path d="M50 75
+        C 65 65, 85 70, 88 82
+        C 91 94, 75 100, 62 95
+        C 49 90, 50 75, 50 75Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <!-- Center circle -->
+      <circle cx="50" cy="55" r="8" stroke="#7C3AED" stroke-width="2" fill="rgba(124,58,237,0.15)"/>
+    </svg>
+  </div>
+  <h1>Trinity Cadence</h1>
+  <p class="tagline">Forge the business. Calibrate the systems. Run the Cadence.</p>
+  <p style="font-size: 1.2rem; color: #E0E0E0; margin-bottom: 2rem;">The AI-Native Operating System for Business Cadence</p>
+  <p style="font-size: 0.9rem; color: #A78BFA;">trinityoneconsulting.com/cadence &nbsp;|&nbsp; A product of Trinity One Consulting</p>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 2 — The Problem -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>The Problem</h2>
+  <h1 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Your Operating System Software Was Built by a Software Company.</h1>
+  <ul>
+    <li>The people who built your current tool have never run a weekly leadership meeting</li>
+    <li>They've never sat in the Integrator seat and watched a leadership team struggle with the same 3 issues for 6 months</li>
+    <li>They bolt on AI as a feature. They don't build it into the workflow.</li>
+    <li>And they charge you per-seat — across every single client org</li>
+  </ul>
+  <div style="margin-top: 1.5rem;">
+    <p style="font-size: 1.3rem; font-weight: 700; color: #7C3AED;">There's a better way.</p>
+  </div>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 3 — The Six Pillars -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>The Six Pillars</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 1rem;">One Framework. Six Pillars. Complete Cadence.</h1>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Pillar</th>
+        <th style="width: 22%;">Tool</th>
+        <th>What It Does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Vision</strong></td>
+        <td>The Blueprint</td>
+        <td>Single-page strategic document — True North, Horizon, Vista, Year Ahead</td>
+      </tr>
+      <tr>
+        <td><strong>People</strong></td>
+        <td>The Seat Map + Fit Check</td>
+        <td>Org structure with clear accountability. Grasp, Drive, Capacity evaluation.</td>
+      </tr>
+      <tr>
+        <td><strong>Data</strong></td>
+        <td>The Pulse</td>
+        <td>Weekly scorecard with 5-15 Signals, 13-week rolling trends, red/yellow/green thresholds</td>
+      </tr>
+      <tr>
+        <td><strong>Issues</strong></td>
+        <td>The Dock + Forge Loop</td>
+        <td>Issues list with priority voting. Surface, Shape, Solve resolution workflow.</td>
+      </tr>
+      <tr>
+        <td><strong>Process</strong></td>
+        <td>The Playbooks</td>
+        <td>Core process documentation with 16 industry-grounded templates</td>
+      </tr>
+      <tr>
+        <td><strong>Progress</strong></td>
+        <td>Anchors + Next Seven</td>
+        <td>90-day priorities + 7-day commitments. Company, team, individual levels.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 4 — AI-Native Features -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>AI-Native Features</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 0.4rem;">Intelligence Built Into Every Workflow</h1>
+  <p style="margin-bottom: 1rem; color: #A78BFA;">Not a chatbot. Not a sidebar. Embedded AI that works while your team works.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">Feature</th>
+        <th>What It Does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Monday Briefing</strong></td>
+        <td>AI summary of last week's Pulse trends, overdue Anchors, unresolved Dock items</td>
+      </tr>
+      <tr>
+        <td><strong>AI Coaching</strong></td>
+        <td>Real-time prompts during Blueprint editing and Huddle facilitation</td>
+      </tr>
+      <tr>
+        <td><strong>Anchor Drafter</strong></td>
+        <td>Turns vague goals into SMART 90-day priorities</td>
+      </tr>
+      <tr>
+        <td><strong>Issue Clustering</strong></td>
+        <td>Groups related Dock items to expose root causes</td>
+      </tr>
+      <tr>
+        <td><strong>Anomaly Detection</strong></td>
+        <td>Flags Signals trending off for 3+ weeks before they become crises</td>
+      </tr>
+      <tr>
+        <td><strong>Huddle Summary</strong></td>
+        <td>Auto-generates meeting summary and extracts Next Seven commitments</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="quote">"Your 3 Uniques read like table stakes — want to sharpen them?" — AI Coaching prompt</div>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 5 — Human + Machine Equation -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>The Human + Machine Equation</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 1.2rem;">AI Optimizes Operations. Dream Manager Optimizes People. Both Required.</h1>
+  <ul>
+    <li>Most leaders only fix one side: systems OR people</li>
+    <li>Trinity Cadence is the only platform that combines operational cadence with people development</li>
+    <li>DreamCompass integration ties individual dreams to team alignment and performance</li>
+    <li>The result: teams that execute AND teams that want to stay</li>
+  </ul>
+  <div class="highlight-box" style="margin-top: 1.5rem;">
+    <div style="display: flex; align-items: center; gap: 2rem; justify-content: center; font-size: 1.1rem; font-weight: 600;">
+      <span style="color: #60A5FA;">AI Engine</span>
+      <span style="color: #7C3AED; font-size: 1.5rem;">+</span>
+      <span style="color: #A78BFA;">Dream Manager</span>
+      <span style="color: #7C3AED; font-size: 1.5rem;">=</span>
+      <span style="color: #4ADE80;">Results That Last</span>
+    </div>
+  </div>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 6 — Translation Guide -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>Translation Guide</h2>
+  <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">Already Running a Business Operating System? You'll Feel Right at Home.</h1>
+  <div class="two-col">
+    <div class="col">
+      <table>
+        <thead>
+          <tr>
+            <th>Trinity Cadence</th>
+            <th>What You May Know It As</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>The Huddle</strong></td><td>Weekly Leadership Meeting</td></tr>
+          <tr><td><strong>Anchors</strong></td><td>90-Day Priorities</td></tr>
+          <tr><td><strong>The Pulse</strong></td><td>Weekly Scorecard</td></tr>
+          <tr><td><strong>Signals</strong></td><td>Weekly Measurables</td></tr>
+          <tr><td><strong>The Dock</strong></td><td>Issues List</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <table>
+        <thead>
+          <tr>
+            <th>Trinity Cadence</th>
+            <th>What You May Know It As</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>The Forge Loop</strong></td><td>Issue Resolution Process</td></tr>
+          <tr><td><strong>The Blueprint</strong></td><td>Strategic Plan Document</td></tr>
+          <tr><td><strong>The Seat Map</strong></td><td>Accountability Structure</td></tr>
+          <tr><td><strong>The Fit Check</strong></td><td>People Evaluation</td></tr>
+          <tr><td><strong>The Recalibration</strong></td><td>Quarterly Session</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; color: #A78BFA;">Every concept maps 1:1. A built-in Translation Guide makes the transition effortless for your team.</p>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 7 — Company Pricing -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>Pricing: For Companies</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 1.2rem;">Simple Per-User Pricing. Start Free.</h1>
+  <div class="two-col">
+    <div class="col">
+      <div class="pricing-card">
+        <h3>Cadence</h3>
+        <div class="price">$16<span style="font-size: 0.9rem; font-weight: 400; color: #A78BFA;">/user/month</span></div>
+        <div class="price-sub">$12.80/user/month billed annually (save 20%)</div>
+        <ul>
+          <li>The Blueprint, Seat Map, Anchors, Pulse, Dock, Forge Loop, Huddle, Next Seven</li>
+          <li>16 Playbook templates</li>
+          <li>Issue clustering + anomaly detection</li>
+          <li>Translation Guide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="pricing-card" style="border-color: #7C3AED;">
+        <h3>Cadence Pro</h3>
+        <div class="price">$24<span style="font-size: 0.9rem; font-weight: 400; color: #A78BFA;">/user/month</span></div>
+        <div class="price-sub">$19.20/user/month billed annually (save 20%)</div>
+        <ul>
+          <li>Everything in Cadence, plus:</li>
+          <li>AI Monday Briefing</li>
+          <li>AI Coaching (Blueprint + Huddle)</li>
+          <li>AI Anchor Drafter</li>
+          <li>AI Playbook Refiner</li>
+          <li>AI Huddle Summary + extraction</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 1rem; font-weight: 600; color: #A78BFA;">14-day free trial. No credit card required.</p>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 8 — Integrator Pricing -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>Pricing: For Integrators</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 0.4rem;">The Slide Your Accountant Will Love</h1>
+  <p style="color: #A78BFA; margin-bottom: 1rem; font-weight: 500;">Stop Paying Per-Seat Across Every Client Org</p>
+  <div class="three-col" style="margin-bottom: 1.2rem;">
+    <div class="col">
+      <div class="pricing-card" style="text-align: center;">
+        <h3>Fractional Starter</h3>
+        <div class="price">$49<span style="font-size: 0.8rem; font-weight: 400; color: #A78BFA;">/mo flat</span></div>
+        <p style="font-size: 0.85rem;">Up to 3 client orgs</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="pricing-card" style="text-align: center; border-color: #7C3AED;">
+        <h3>Fractional Professional</h3>
+        <div class="price">$99<span style="font-size: 0.8rem; font-weight: 400; color: #A78BFA;">/mo flat</span></div>
+        <p style="font-size: 0.85rem;">Up to 8 client orgs</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="pricing-card" style="text-align: center;">
+        <h3>Fractional Practice</h3>
+        <div class="price">$199<span style="font-size: 0.8rem; font-weight: 400; color: #A78BFA;">/mo flat</span></div>
+        <p style="font-size: 0.85rem;">9+ client orgs</p>
+      </div>
+    </div>
+  </div>
+  <p style="font-weight: 600; color: #C4B5FD; margin-bottom: 0.5rem;">The Math: 5 Client Orgs x 8 Users Each</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Per-Seat Tool</th>
+        <th>Trinity Cadence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Your monthly cost</strong></td>
+        <td>~$800/month</td>
+        <td style="color: #4ADE80; font-weight: 700;">$99/month</td>
+      </tr>
+      <tr>
+        <td><strong>Add 2 more clients</strong></td>
+        <td>~$1,120/month</td>
+        <td style="color: #4ADE80; font-weight: 700;">$99/month</td>
+      </tr>
+      <tr>
+        <td><strong>Scale to 10 clients</strong></td>
+        <td>~$1,600/month</td>
+        <td style="color: #4ADE80; font-weight: 700;">$199/month</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size: 0.82rem; color: #A78BFA; margin-top: 0.5rem;">Your access is flat-rate. Your clients' orgs are billed separately at per-seat rates.</p>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 9 — Playbook Templates -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>Playbook Templates</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 0.4rem;">16 Industry-Grounded Process Templates</h1>
+  <p style="color: #A78BFA; margin-bottom: 1.2rem;">Not generic checklists. Real operational standards adapted for small and mid-size companies.</p>
+
+  <div class="template-section">
+    <h3>Universal (8 templates)</h3>
+    <div class="template-list">
+      <span>Customer Onboarding (ITIL 4/APQC)</span>
+      <span>Employee Onboarding (SHRM)</span>
+      <span>Vendor Onboarding (APQC)</span>
+      <span>Month-End Close (APQC/GAAP)</span>
+      <span>Support Escalation (ITIL 4)</span>
+      <span>Quarterly Business Review (PMI)</span>
+      <span>Pricing Change (APQC/SCOR)</span>
+      <span>IT Change Management (ITIL 4)</span>
+    </div>
+  </div>
+
+  <div class="template-section">
+    <h3>Manufacturing &amp; Distribution (6 templates)</h3>
+    <div class="template-list">
+      <span>Quote-to-Order (SCOR/APQC)</span>
+      <span>Order-to-Cash (SCOR)</span>
+      <span>Procure-to-Pay (SCOR/ASCM)</span>
+      <span>Inventory Management (ASCM/SCOR)</span>
+      <span>Receiving &amp; Inspection (SCOR)</span>
+      <span>RMA/Returns (SCOR/ITIL)</span>
+    </div>
+  </div>
+
+  <div class="template-section">
+    <h3>Services (2 templates)</h3>
+    <div class="template-list">
+      <span>Project Kickoff (PMI PMBOK)</span>
+      <span>Engagement Delivery (PMI/APQC)</span>
+    </div>
+  </div>
+
+  <p style="font-size: 0.88rem; color: #C4B5FD; margin-top: 0.5rem;">Every template gives your team a head start. Customize from a strong foundation, not a blank page.</p>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 10 — About Kevin Patrick -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>About the Builder</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 1.2rem;">Built by Someone Who Sits in Your Seat</h1>
+  <div class="two-col">
+    <div class="col">
+      <ul>
+        <li>30+ years in ERP and operational systems (SAP Business One, Acumatica)</li>
+        <li>Active Fractional COO &amp; Integrator for $3M-$50M companies</li>
+        <li>Certified Dream Manager (Floyd Consulting / Matthew Kelly methodology)</li>
+        <li>Uses Trinity Cadence with his own clients every week</li>
+        <li>Founder of Trinity One Consulting</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>The Trinity One Ecosystem</h3>
+      <div class="highlight-box" style="margin-top: 0.5rem;">
+        <ul>
+          <li><strong style="color: #C4B5FD;">Trinity Forge</strong> — AI-powered business launch (2-4 week sprints)</li>
+          <li><strong style="color: #C4B5FD;">Trinity Calibrate</strong> — AI optimization for established SMBs (ROI in 60-90 days)</li>
+          <li><strong style="color: #C4B5FD;">DreamCompass</strong> — SaaS Dream Manager platform</li>
+          <li><strong style="color: #C4B5FD;">The Dream Dividend</strong> — Podcast on dreams, culture, and operational leadership</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 11 — How to Get Started -->
+<!-- ============================================= -->
+<div class="slide">
+  <h2>How to Get Started</h2>
+  <h1 style="font-size: 1.6rem; margin-bottom: 1.5rem;">Three Ways to Start</h1>
+  <div class="three-col">
+    <div class="col">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Free Trial (Self-Serve)</h3>
+        <p>Sign up at trinityoneconsulting.com/cadence</p>
+        <p>Create your org, invite your team</p>
+        <p>14 days, full access, no credit card</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="step" style="border-color: #7C3AED;">
+        <div class="step-number">2</div>
+        <h3>Book a Demo</h3>
+        <p>30-minute walkthrough with Kevin</p>
+        <p style="color: #A78BFA;">calendly.com/kevin-trinityoneconsulting</p>
+        <p>See real product, ask real questions</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Founding Partner Program</h3>
+        <p style="font-size: 0.8rem; color: #A78BFA;">(Integrators Only)</p>
+        <p>First 10 Integrator partners</p>
+        <p>Roadmap input, co-branded materials, 24-month price lock</p>
+        <p>Book an Integrator Demo to learn more</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Trinity Cadence &mdash; trinityoneconsulting.com/cadence</div>
+</div>
+
+<!-- ============================================= -->
+<!-- SLIDE 12 — Contact -->
+<!-- ============================================= -->
+<div class="slide slide-contact">
+  <div class="logo-triquetra">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100" fill="none">
+      <path d="M50 10
+        C 35 10, 20 25, 20 40
+        C 20 55, 35 65, 50 75
+        C 65 65, 80 55, 80 40
+        C 80 25, 65 10, 50 10Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <path d="M50 75
+        C 35 65, 15 70, 12 82
+        C 9 94, 25 100, 38 95
+        C 51 90, 50 75, 50 75Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <path d="M50 75
+        C 65 65, 85 70, 88 82
+        C 91 94, 75 100, 62 95
+        C 49 90, 50 75, 50 75Z"
+        stroke="#7C3AED" stroke-width="2.5" fill="none"/>
+      <circle cx="50" cy="55" r="8" stroke="#7C3AED" stroke-width="2" fill="rgba(124,58,237,0.15)"/>
+    </svg>
+  </div>
+  <p class="tagline" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Forge the business. Calibrate the systems. Run the Cadence.</p>
+  <h1 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Trinity Cadence</h1>
+  <p style="font-size: 1.1rem; margin-bottom: 0.3rem;"><strong style="color: #C4B5FD;">trinityoneconsulting.com/cadence</strong></p>
+  <p style="font-size: 1rem; margin-bottom: 0.3rem;">kevin@trinityoneconsulting.com</p>
+  <p style="font-size: 1rem; margin-bottom: 1.5rem; color: #A78BFA;">calendly.com/kevin-trinityoneconsulting</p>
+  <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+    <div style="background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 8px; padding: 0.6rem 1.5rem;">
+      <p style="font-size: 0.9rem; margin: 0; color: #C4B5FD; font-weight: 500;">14-day free trial. No credit card required.</p>
+    </div>
+  </div>
+  <p style="font-size: 0.9rem; color: #A78BFA;">Set up your first Huddle in under 10 minutes.</p>
+  <p style="font-size: 0.8rem; color: rgba(167,139,250,0.5); margin-top: 2rem;">Trinity One Consulting &nbsp;|&nbsp; trinityoneconsulting.com</p>
+</div>
+
+</body>
+</html>

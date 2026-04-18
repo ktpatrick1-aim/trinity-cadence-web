@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Cadence | AI-Native Operating System for Business Cadence</title>
+  <meta name="description" content="Run your business cadence with AI-native tools built by an Integrator. Weekly meetings, scorecards, 90-day priorities, issue resolution — all powered by AI coaching.">
+  <meta name="keywords" content="EOS software, business operating system, weekly meeting software, scorecard alternative, Ninety.io alternative, AI business tools">
+  <link rel="canonical" href="https://trinityoneconsulting.com/cadence/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trinityoneconsulting.com/cadence/">
+  <meta property="og:title" content="Trinity Cadence | AI-Native Operating System for Business Cadence">
+  <meta property="og:description" content="Run your business cadence with AI-native tools built by an Integrator. Weekly meetings, scorecards, 90-day priorities, issue resolution — all powered by AI coaching.">
+  <meta property="og:site_name" content="Trinity Cadence">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trinity Cadence | AI-Native Operating System for Business Cadence">
+  <meta name="twitter:description" content="Run your business cadence with AI-native tools built by an Integrator. Weekly meetings, scorecards, 90-day priorities, issue resolution — all powered by AI coaching.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Trinity Cadence",
+    "description": "AI-Native Operating System for Business Cadence",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "creator": {
+      "@type": "Organization",
+      "name": "Trinity One Consulting"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Cadence",
+        "price": "16.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "16.00",
+          "priceCurrency": "USD",
+          "unitText": "per user per month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Cadence Pro",
+        "price": "24.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "24.00",
+          "priceCurrency": "USD",
+          "unitText": "per user per month"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="cadence-bg"></div>
+
+  <!-- Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-overlay"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="nav-brand">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-logo">
+          <!-- Cadence rhythm lines -->
+          <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+          <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+          <!-- Triquetra knot -->
+          <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Center accent -->
+          <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+        </svg>
+        <span>Trinity Cadence</span>
+      </a>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#ai" class="nav-link">AI</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="https://app.trinitycadence.com/signup" class="nav-link nav-cta">Start Free Trial</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container">
+      <div class="hero-content slide-up">
+        <p class="typing-text">AI-Native. Integrator-Built.</p>
+        <h1>Run Your Cadence. <span class="violet">Powered by AI.</span></h1>
+        <p class="hero-description">The AI-native operating system that brings your weekly meetings, scorecards, 90-day priorities, and issue resolution into one unified cadence — with intelligent coaching built into every workflow.</p>
+        <div class="hero-buttons">
+          <a href="https://app.trinitycadence.com/signup" class="btn btn-primary btn-pulse">Start 14-Day Free Trial</a>
+          <a href="https://calendly.com/kevin-trinityoneconsulting" class="btn btn-secondary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience Tab Switcher -->
+  <div class="audience-switcher container">
+    <div class="tab-switcher">
+      <button class="tab-btn active" data-track="companies">For Companies</button>
+      <button class="tab-btn" data-track="integrators">For Integrators</button>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- COMPANIES TRACK -->
+  <!-- ============================================ -->
+  <div id="track-companies" class="audience-content active">
+
+    <!-- Six Pillars -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header slide-up">
+          <span class="section-label">The Trinity Framework</span>
+          <h2>Six Pillars. One Cadence.</h2>
+        </div>
+        <div class="pillars-grid stagger">
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon violet-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <h3>Vision</h3>
+            <p>The Blueprint captures your True North, Horizon (3-year picture), Vista (1-year view), and Year Ahead targets — all on one page.</p>
+          </div>
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon success-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>People</h3>
+            <p>Seat Map visualizes your org chart. Fit Check evaluates every seat with Grasp, Drive, and Capacity — replacing subjective reviews with structured clarity.</p>
+          </div>
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon calibrate-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Data</h3>
+            <p>Pulse tracks 5-15 Signals weekly across a 13-week rolling window. AI anomaly detection flags trends before they become problems.</p>
+          </div>
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon forge-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            </div>
+            <h3>Issues</h3>
+            <p>The Dock captures everything. The Forge Loop (Surface, Shape, Solve) drives resolution. AI clustering groups related items when 8+ accumulate.</p>
+          </div>
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon violet-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Process</h3>
+            <p>Playbooks document your core processes with 16 industry-grounded templates drawn from ITIL, SCOR, PMI, and SHRM frameworks.</p>
+          </div>
+          <div class="pillar-card slide-up">
+            <div class="pillar-icon calibrate-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Progress</h3>
+            <p>Anchors set 90-day priorities. Next Seven tracks weekly to-dos. Huddle runs your weekly leadership meeting with a built-in agenda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Features -->
+    <section id="ai" class="section section-dark">
+      <div class="container">
+        <div class="section-header slide-up">
+          <span class="section-label">AI-Native, Not AI-Bolted-On</span>
+          <h2>Intelligence Built Into Every Workflow</h2>
+        </div>
+        <div class="ai-grid stagger">
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>Monday Briefing <span class="badge badge-pro">Pro</span></h3>
+              <p>AI-generated summary of last week's trends, off-track Signals, and overdue Anchors — delivered before your Monday meeting starts.</p>
+            </div>
+          </div>
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>AI Coaching <span class="badge badge-pro">Pro</span></h3>
+              <p>Real-time coaching prompts during Blueprint sessions and Huddles — nudges your team toward better decisions without replacing the facilitator.</p>
+            </div>
+          </div>
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>Issue Clustering</h3>
+              <p>Automatically groups related Dock items when 8 or more accumulate, surfacing root-cause patterns your team might miss.</p>
+            </div>
+          </div>
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>Anomaly Detection</h3>
+              <p>Flags Signals trending off-track for 3 or more consecutive weeks — so your team can act before small dips become big problems.</p>
+            </div>
+          </div>
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>Anchor Drafter <span class="badge badge-pro">Pro</span></h3>
+              <p>Turns vague goals into SMART Anchors with measurable milestones — because "improve sales" is not a 90-day priority.</p>
+            </div>
+          </div>
+          <div class="ai-card slide-up">
+            <div class="ai-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="ai-card-content">
+              <h3>Huddle Summary</h3>
+              <p>Auto-generates a meeting summary after every Huddle with action items extracted and Next Seven tasks created — no note-taker needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-header slide-up">
+          <h2>Start Free. Scale as You Grow.</h2>
+        </div>
+        <div class="pricing-grid stagger">
+          <div class="pricing-card slide-up">
+            <div class="pricing-header">
+              <h3>Cadence</h3>
+              <div class="pricing-amount">
+                <span class="price">$16</span>
+                <span class="price-period">/user/mo</span>
+              </div>
+              <p class="price-annual">$12.80/user/mo billed annually</p>
+            </div>
+            <ul class="pricing-features">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Blueprint (Vision on a Page)</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Seat Map + Fit Check</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Pulse (Weekly Signals)</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dock + Forge Loop</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Anchors (90-Day Priorities)</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Next Seven + Huddle</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Playbook Templates</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Issue Clustering</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Anomaly Detection</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Huddle Summary</li>
+            </ul>
+            <a href="https://app.trinitycadence.com/signup" class="btn btn-primary">Start 14-Day Free Trial</a>
+          </div>
+          <div class="pricing-card featured slide-up">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Cadence Pro</h3>
+              <div class="pricing-amount">
+                <span class="price">$24</span>
+                <span class="price-period">/user/mo</span>
+              </div>
+              <p class="price-annual">$19.20/user/mo billed annually</p>
+            </div>
+            <p class="pricing-includes">Everything in Cadence, plus:</p>
+            <ul class="pricing-features">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Monday Briefing</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Coaching (Blueprint + Huddle)</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Anchor Drafter</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Advanced Analytics</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority Support</li>
+            </ul>
+            <a href="https://app.trinitycadence.com/signup" class="btn btn-primary btn-pulse">Start 14-Day Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Translation Guide -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header slide-up">
+          <h2>Already Running a Business Operating System?</h2>
+          <p class="section-subtitle">Trinity Cadence maps to the frameworks you already know. Here's how our vocabulary translates.</p>
+        </div>
+        <div class="translation-grid slide-up">
+          <div class="translation-row translation-header">
+            <span>Trinity Cadence</span>
+            <span>What It Replaces</span>
+          </div>
+          <div class="translation-row">
+            <span>Blueprint</span>
+            <span>Vision / Strategy Document</span>
+          </div>
+          <div class="translation-row">
+            <span>Huddle</span>
+            <span>Weekly Leadership Meeting</span>
+          </div>
+          <div class="translation-row">
+            <span>Anchors</span>
+            <span>90-Day Priorities</span>
+          </div>
+          <div class="translation-row">
+            <span>Pulse / Signals</span>
+            <span>Weekly Scorecard</span>
+          </div>
+          <div class="translation-row">
+            <span>Dock</span>
+            <span>Issues List</span>
+          </div>
+          <div class="translation-row">
+            <span>Forge Loop</span>
+            <span>Issue Resolution Process</span>
+          </div>
+          <div class="translation-row">
+            <span>Fit Check</span>
+            <span>People Evaluation Tool</span>
+          </div>
+          <div class="translation-row">
+            <span>Seat Map</span>
+            <span>Accountability Chart</span>
+          </div>
+          <div class="translation-row">
+            <span>Next Seven</span>
+            <span>Weekly To-Dos</span>
+          </div>
+          <div class="translation-row">
+            <span>Playbooks</span>
+            <span>Core Process Documentation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- END COMPANIES TRACK -->
+
+  <!-- ============================================ -->
+  <!-- INTEGRATORS TRACK -->
+  <!-- ============================================ -->
+  <div id="track-integrators" class="audience-content">
+
+    <!-- Cost Comparison -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header slide-up">
+          <h2>Stop Paying Per-Seat Across Every Client Org</h2>
+        </div>
+        <div class="comparison-box slide-up">
+          <div class="comparison-scenario">
+            <p class="comparison-label">Typical Integrator: 5 orgs x 8 users</p>
+          </div>
+          <div class="comparison-vs">
+            <div class="comparison-item competitor">
+              <span class="comparison-name">Per-Seat Tool</span>
+              <span class="comparison-price">~$800/mo</span>
+            </div>
+            <div class="comparison-divider">vs</div>
+            <div class="comparison-item trinity">
+              <span class="comparison-name">Trinity Cadence</span>
+              <span class="comparison-price">$99/mo</span>
+            </div>
+          </div>
+          <div class="comparison-savings">
+            <span class="savings-badge">Save 80%+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrator Pricing -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header slide-up">
+          <h2>Flat-Rate Pricing for Integrators</h2>
+        </div>
+        <div class="pricing-grid pricing-grid-3 stagger">
+          <div class="pricing-card slide-up">
+            <div class="pricing-badge flat-badge">Flat Rate</div>
+            <div class="pricing-header">
+              <h3>Starter</h3>
+              <div class="pricing-amount">
+                <span class="price">$49</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <p class="price-annual">Up to 3 client organizations</p>
+            </div>
+            <ul class="pricing-features">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited users per org</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full Cadence feature set</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Multi-Org Switcher</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 16 Playbook Templates</li>
+            </ul>
+            <a href="https://app.trinitycadence.com/signup" class="btn btn-primary">Start Free Trial</a>
+          </div>
+          <div class="pricing-card featured slide-up">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-badge flat-badge">Flat Rate</div>
+            <div class="pricing-header">
+              <h3>Professional</h3>
+              <div class="pricing-amount">
+                <span class="price">$99</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <p class="price-annual">Up to 8 client organizations</p>
+            </div>
+            <ul class="pricing-features">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Starter</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AI Coaching (Pro features)</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Audit Log</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Translation Guide</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Priority Support</li>
+            </ul>
+            <a href="https://app.trinitycadence.com/signup" class="btn btn-primary btn-pulse">Start Free Trial</a>
+          </div>
+          <div class="pricing-card slide-up">
+            <div class="pricing-badge flat-badge">Flat Rate</div>
+            <div class="pricing-header">
+              <h3>Practice</h3>
+              <div class="pricing-amount">
+                <span class="price">$199</span>
+                <span class="price-period">/mo</span>
+              </div>
+              <p class="price-annual">9+ client organizations</p>
+            </div>
+            <ul class="pricing-features">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Professional</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited organizations</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Founding Partner Program</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> White-glove onboarding</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dedicated support channel</li>
+            </ul>
+            <a href="https://app.trinitycadence.com/signup" class="btn btn-primary">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrator Features -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header slide-up">
+          <h2>Built for How Integrators Actually Work</h2>
+        </div>
+        <div class="features-grid stagger">
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Multi-Org Switcher</h3>
+            <p>Jump between client organizations instantly. One login, every client at your fingertips.</p>
+          </div>
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Audit Log</h3>
+            <p>Full transparency on who changed what, when. Essential for facilitator accountability and client trust.</p>
+          </div>
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>AI Coaching</h3>
+            <p>Real-time facilitation prompts that make you a better Integrator in every session — like having a coach in your ear.</p>
+          </div>
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>16 Playbook Templates</h3>
+            <p>Industry-grounded process templates from ITIL, SCOR, PMI, and SHRM — ready to deploy on day one with any client.</p>
+          </div>
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            </div>
+            <h3>Translation Guide</h3>
+            <p>Map Trinity Cadence vocabulary to any business operating system framework your clients already know.</p>
+          </div>
+          <div class="feature-card slide-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Founding Partner Program</h3>
+            <p>Early adopters lock in lifetime pricing and get direct input into the product roadmap. Limited spots available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- END INTEGRATORS TRACK -->
+
+  <!-- ============================================ -->
+  <!-- SHARED SECTIONS -->
+  <!-- ============================================ -->
+
+  <!-- Playbook Templates -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-label">Process Library</span>
+        <h2>16 Industry-Grounded Playbook Templates</h2>
+      </div>
+      <div class="playbook-grid stagger">
+        <div class="playbook-chip slide-up">Sales (MEDDIC)</div>
+        <div class="playbook-chip slide-up">Marketing (STP)</div>
+        <div class="playbook-chip slide-up">Operations (SCOR)</div>
+        <div class="playbook-chip slide-up">Finance (GAAP)</div>
+        <div class="playbook-chip slide-up">HR / People (SHRM)</div>
+        <div class="playbook-chip slide-up">IT / Engineering (ITIL)</div>
+        <div class="playbook-chip slide-up">Product (PMI)</div>
+        <div class="playbook-chip slide-up">Customer Success (TSIA)</div>
+        <div class="playbook-chip slide-up">Legal (ACC)</div>
+        <div class="playbook-chip slide-up">Procurement (ISM)</div>
+        <div class="playbook-chip slide-up">Quality (ASQ)</div>
+        <div class="playbook-chip slide-up">Safety (OSHA)</div>
+        <div class="playbook-chip slide-up">Project Mgmt (PMI)</div>
+        <div class="playbook-chip slide-up">Data / Analytics (DAMA)</div>
+        <div class="playbook-chip slide-up">R&D (Stage-Gate)</div>
+        <div class="playbook-chip slide-up">Facilities (IFMA)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built by an Integrator -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content slide-up">
+          <span class="section-label">Built by an Integrator</span>
+          <h2>Not Another SaaS Tool. A System Built From the Chair.</h2>
+          <p>Trinity Cadence was built by Kevin Patrick, a business operating system Integrator with 30+ years of experience across technology, consulting, and leadership. After years of facilitating sessions with clunky tools that were never designed for how Integrators actually work, he built the system he wished existed.</p>
+          <ul class="about-features">
+            <li>AI-native from day one — not bolted on after launch</li>
+            <li>Designed around the weekly, quarterly, and annual cadence</li>
+            <li>Flat-rate Integrator pricing that scales with your practice</li>
+            <li>16 industry-grounded Playbook templates included</li>
+            <li>Built on the Trinity Framework: Forge, Calibrate, Cadence</li>
+          </ul>
+          <a href="https://trinityoneconsulting.com" class="btn btn-secondary" target="_blank" rel="noopener">Learn About Trinity One Consulting</a>
+        </div>
+        <div class="about-credibility slide-up">
+          <div class="credibility-card">
+            <div class="credibility-stat">30+</div>
+            <p class="credibility-label">Years of Experience</p>
+            <div class="credibility-divider"></div>
+            <div class="credibility-stat">3</div>
+            <p class="credibility-label">Products in the Trinity Suite</p>
+            <div class="credibility-divider"></div>
+            <div class="credibility-detail">
+              <p><strong>Trinity Forge</strong> — Strategic planning & alignment</p>
+              <p><strong>Trinity Calibrate</strong> — Systems assessment & optimization</p>
+              <p><strong>Trinity Cadence</strong> — Weekly, quarterly, annual execution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section section-cta">
+    <div class="container">
+      <div class="cta-content slide-up">
+        <h2>Forge the business. Calibrate the systems. Run the Cadence.</h2>
+        <p>Start your 14-day free trial today. No credit card required.</p>
+        <div class="cta-buttons">
+          <a href="https://app.trinitycadence.com/signup" class="btn btn-primary btn-pulse">Start 14-Day Free Trial</a>
+          <a href="https://calendly.com/kevin-trinityoneconsulting" class="btn btn-secondary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Trinity Cadence</h3>
+          <p>The AI-native operating system for running your business cadence. Weekly meetings, scorecards, 90-day priorities, and issue resolution — all powered by intelligent coaching.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#ai">AI</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="https://app.trinitycadence.com/signup">Free Trial</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="https://trinityoneconsulting.com" target="_blank" rel="noopener">Trinity One</a></li>
+            <li><a href="https://forge.trinityoneconsulting.com" target="_blank" rel="noopener">Forge</a></li>
+            <li><a href="https://calibrate.trinityoneconsulting.com" target="_blank" rel="noopener">Calibrate</a></li>
+            <li><a href="https://dreamdividend.trinityoneconsulting.com" target="_blank" rel="noopener">Dream Dividend</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://calendly.com/kevin-trinityoneconsulting">Book a Demo</a></li>
+            <li><a href="mailto:kevin@trinityoneconsulting.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Trinity One Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

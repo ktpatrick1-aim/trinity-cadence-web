@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity Cadence — Sales Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cover Page */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    text-align: center;
+    page-break-after: always;
+  }
+
+  .cover-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .cover-logo svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .cover-logo-text {
+    font-size: 24pt;
+    font-weight: 700;
+    color: #7C3AED;
+    letter-spacing: -0.5px;
+  }
+
+  .cover-title {
+    font-size: 36pt;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .cover-subtitle {
+    font-size: 13pt;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 48px;
+    max-width: 480px;
+  }
+
+  .cover-confidential {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #b91c1c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid #b91c1c;
+    padding: 8px 24px;
+    border-radius: 4px;
+    margin-bottom: 60px;
+  }
+
+  /* Table of Contents */
+  .toc {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .toc-heading {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #7C3AED;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dotted #d1d5db;
+    font-size: 10.5pt;
+  }
+
+  .toc-number {
+    font-weight: 700;
+    color: #7C3AED;
+    min-width: 28px;
+  }
+
+  .toc-label {
+    font-weight: 500;
+    color: #1a1a2e;
+  }
+
+  /* Section Styles */
+  .section {
+    page-break-before: always;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #7C3AED;
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    background: #f5f3ff;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .section-number {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #7C3AED;
+    margin-right: 12px;
+  }
+
+  .section-title {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .sub-header {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  /* Page Header */
+  .page-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .page-header svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .page-header-text {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #7C3AED;
+    letter-spacing: 0.5px;
+  }
+
+  /* Discovery Questions */
+  .question-list {
+    list-style: none;
+    counter-reset: question-counter;
+  }
+
+  .question-item {
+    counter-increment: question-counter;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #fafafa;
+    border-radius: 6px;
+    border-left: 3px solid #e5e7eb;
+  }
+
+  .question-item:hover {
+    border-left-color: #7C3AED;
+  }
+
+  .question-number {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #7C3AED;
+    margin-bottom: 2px;
+  }
+
+  .question-text {
+    font-weight: 600;
+    font-size: 10pt;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+  }
+
+  .question-context {
+    font-size: 9pt;
+    color: #555;
+    font-weight: 400;
+    padding-left: 8px;
+    border-left: 2px solid #d1d5db;
+  }
+
+  /* Intro Note */
+  .intro-note {
+    font-size: 9.5pt;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    background: #f9fafb;
+    border-radius: 4px;
+  }
+
+  /* Objection Boxes */
+  .objection-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    page-break-inside: avoid;
+  }
+
+  .objection-header {
+    background: #7C3AED;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 10.5pt;
+  }
+
+  .objection-body {
+    padding: 16px;
+  }
+
+  .objection-label {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #7C3AED;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .objection-quote {
+    font-style: italic;
+    color: #374151;
+    font-size: 9.5pt;
+    padding: 8px 12px;
+    background: #f5f3ff;
+    border-left: 3px solid #7C3AED;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 12px;
+  }
+
+  .objection-points {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 9pt;
+    color: #374151;
+  }
+
+  .objection-points li {
+    margin-bottom: 4px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 9pt;
+  }
+
+  thead th {
+    background: #1a1a2e;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+
+  thead th:first-child {
+    border-radius: 6px 0 0 0;
+  }
+
+  thead th:last-child {
+    border-radius: 0 6px 0 0;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #f8fafc;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #ffffff;
+  }
+
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 9pt;
+  }
+
+  tbody td:first-child {
+    font-weight: 600;
+  }
+
+  /* Pipeline Tables */
+  .pipeline-table thead th {
+    background: #7C3AED;
+  }
+
+  /* Warning / Success Boxes */
+  .warning-box {
+    border: 2px solid #dc2626;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    background: #fef2f2;
+  }
+
+  .warning-box-header {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #dc2626;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .warning-box ul {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+    column-gap: 24px;
+    font-size: 9pt;
+    color: #7f1d1d;
+  }
+
+  .warning-box ul li {
+    padding: 3px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .warning-box ul li::before {
+    content: "\2718";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: 700;
+  }
+
+  .success-box {
+    border: 2px solid #16a34a;
+    border-radius: 8px;
+    padding: 16px 20px;
+    background: #f0fdf4;
+  }
+
+  .success-box-header {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #16a34a;
+    margin-bottom: 8px;
+  }
+
+  .success-box p {
+    font-size: 9.5pt;
+    color: #14532d;
+  }
+
+  /* Guardrails */
+  .guardrail-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .guardrail-list li {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #f8fafc;
+    border-left: 3px solid #7C3AED;
+    border-radius: 0 6px 6px 0;
+    font-size: 9.5pt;
+  }
+
+  .guardrail-list li strong {
+    color: #1a1a2e;
+  }
+
+  @media print {
+    body {
+      font-size: 9pt;
+    }
+    .cover {
+      min-height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== COVER PAGE ====== -->
+<div class="cover">
+  <div class="cover-logo">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="cover-logo-text">Trinity Cadence</span>
+  </div>
+
+  <h1 class="cover-title">Sales Playbook</h1>
+  <p class="cover-subtitle">Dual-Channel Sales Guide for Companies and Integrator Partners</p>
+
+  <div class="cover-confidential">CONFIDENTIAL &mdash; For Internal Use Only</div>
+
+  <div class="toc">
+    <div class="toc-heading">Table of Contents</div>
+    <div class="toc-item"><span class="toc-number">1.</span><span class="toc-label">Channel 1: Integrator Discovery Questions</span></div>
+    <div class="toc-item"><span class="toc-number">2.</span><span class="toc-label">Channel 2: Company Discovery Questions</span></div>
+    <div class="toc-item"><span class="toc-number">3.</span><span class="toc-label">Top 5 Objection Responses</span></div>
+    <div class="toc-item"><span class="toc-number">4.</span><span class="toc-label">Closing Process</span></div>
+    <div class="toc-item"><span class="toc-number">5.</span><span class="toc-label">Pricing Negotiation Guardrails</span></div>
+    <div class="toc-item"><span class="toc-number">6.</span><span class="toc-label">CRM Pipeline Stages</span></div>
+    <div class="toc-item"><span class="toc-number">7.</span><span class="toc-label">Key Assets &amp; Links</span></div>
+    <div class="toc-item"><span class="toc-number">8.</span><span class="toc-label">Trademark Reminders</span></div>
+  </div>
+</div>
+
+<!-- ====== SECTION 1: INTEGRATOR DISCOVERY ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">1</span>
+    <span class="section-title">Channel 1: Integrator Discovery Questions</span>
+  </div>
+
+  <p class="intro-note">Use these in a peer-to-peer demo conversation &mdash; not a sales pitch.</p>
+
+  <ol class="question-list">
+    <li class="question-item">
+      <div class="question-number">Question 1</div>
+      <div class="question-text">How many client organizations are you managing right now?</div>
+      <div class="question-context">Sizing for fractional tier recommendation (Starter &le;3, Professional &le;8, Practice 9+)</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 2</div>
+      <div class="question-text">What tool are you using today for weekly meetings and scorecards?</div>
+      <div class="question-context">Identifies current platform and switching cost</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 3</div>
+      <div class="question-text">What are you paying per seat across all your client orgs?</div>
+      <div class="question-context">Opens the flat-rate pricing conversation &mdash; this is the hook</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 4</div>
+      <div class="question-text">How do you currently onboard a new client onto your platform?</div>
+      <div class="question-context">Reveals friction points Trinity Cadence can solve</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 5</div>
+      <div class="question-text">What's your biggest frustration with your current tool?</div>
+      <div class="question-context">Surfaces unmet needs &mdash; typically: cost, dated UI, no AI, trademark constraints</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 6</div>
+      <div class="question-text">Do you document processes with your clients? How?</div>
+      <div class="question-context">Opens the Playbook templates conversation</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 7</div>
+      <div class="question-text">How do you track what happened in a client org between your visits?</div>
+      <div class="question-context">Introduces the audit log and AI Monday Briefing</div>
+    </li>
+  </ol>
+</div>
+
+<!-- ====== SECTION 2: COMPANY DISCOVERY ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">2</span>
+    <span class="section-title">Channel 2: Company Discovery Questions</span>
+  </div>
+
+  <ol class="question-list">
+    <li class="question-item">
+      <div class="question-number">Question 1</div>
+      <div class="question-text">Are you running a business operating system or framework today?</div>
+      <div class="question-context">Qualifies whether they're EOS-aware or net-new</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 2</div>
+      <div class="question-text">Who facilitates your weekly leadership meetings?</div>
+      <div class="question-context">Identifies whether they have an Integrator (potential Channel 1 lead)</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 3</div>
+      <div class="question-text">What tools are you using for scorecards, priorities, and issues?</div>
+      <div class="question-context">Common answers: spreadsheets, Ninety.io, nothing formal</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 4</div>
+      <div class="question-text">What's broken about your current cadence?</div>
+      <div class="question-context">Surfaces pain: meetings run long, priorities slip, same issues recur</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 5</div>
+      <div class="question-text">How does your team track 90-day priorities today?</div>
+      <div class="question-context">Anchors are often the biggest "aha" feature</div>
+    </li>
+    <li class="question-item">
+      <div class="question-number">Question 6</div>
+      <div class="question-text">Do you have documented core processes? How current are they?</div>
+      <div class="question-context">Opens the Playbook value conversation</div>
+    </li>
+  </ol>
+</div>
+
+<!-- ====== SECTION 3: OBJECTION RESPONSES ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">3</span>
+    <span class="section-title">Top 5 Objection Responses</span>
+  </div>
+
+  <!-- Objection 1 -->
+  <div class="objection-box">
+    <div class="objection-header">Objection 1: "We already use Ninety.io"</div>
+    <div class="objection-body">
+      <div class="objection-label">Response Framework:</div>
+      <div class="objection-quote">"That's great &mdash; you already have the discipline of a weekly cadence. Two questions: How much are you paying per seat, and what does the AI do for you during your meetings?"</div>
+      <div class="objection-label">Key Points:</div>
+      <ul class="objection-points">
+        <li>Ninety.io charges per-seat. For a 10-person team: ~$200/month on Ninety.io vs. $160&ndash;$240/month on Trinity Cadence (comparable). The difference is what you GET.</li>
+        <li>Trinity Cadence has 6 native AI features. Ninety.io's AI is limited.</li>
+        <li>For Integrators: Ninety.io charges per-seat across every client org. Trinity Cadence is flat-rate.</li>
+        <li>Trinity Cadence uses proprietary vocabulary &mdash; no trademark dependency.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Objection 2 -->
+  <div class="objection-box">
+    <div class="objection-header">Objection 2: "The terminology is different from what we know"</div>
+    <div class="objection-body">
+      <div class="objection-label">Response Framework:</div>
+      <div class="objection-quote">"Every concept maps 1:1 to what you already know. We built a Translation Guide right into the product &mdash; click one button and you see the familiar terms alongside ours. Your team learns the new names in their first Huddle. The reason we use our own vocabulary is that it gives us freedom to evolve the product without trademark constraints."</div>
+      <div class="objection-label">Key Points:</div>
+      <ul class="objection-points">
+        <li>Show the Translation Guide in the demo</li>
+        <li>Emphasize: same concepts, same workflow, different (and often clearer) names</li>
+        <li>Trademark freedom means we can innovate without licensing restrictions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Objection 3 -->
+  <div class="objection-box">
+    <div class="objection-header">Objection 3: "I've never heard of this product"</div>
+    <div class="objection-body">
+      <div class="objection-label">Response Framework:</div>
+      <div class="objection-quote">"You're right &mdash; we're new to market. What we're not new to is running businesses. I built Trinity Cadence because I'm a Fractional COO who was frustrated with the tools I was asking my clients to use. I use this with my own clients every week. The product exists because I needed it."</div>
+      <div class="objection-label">Key Points:</div>
+      <ul class="objection-points">
+        <li>Lead with KP's 30+ years of operational experience</li>
+        <li>"Built by an Integrator who uses it every Monday morning"</li>
+        <li>Offer to show a real (anonymized) client instance</li>
+        <li>Being new means they get direct access to the founder for feedback and feature requests</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Objection 4 -->
+  <div class="objection-box">
+    <div class="objection-header">Objection 4: "Can I see it in action?"</div>
+    <div class="objection-body">
+      <div class="objection-label">Response Framework:</div>
+      <div class="objection-quote">"Absolutely. I can do one of two things: walk you through the product in a 30-minute demo using a real instance I use with my own clients, or you can start a 14-day free trial right now and I'll check in with you in a week."</div>
+      <div class="objection-label">Key Points:</div>
+      <ul class="objection-points">
+        <li>Always offer both: live demo AND self-serve trial</li>
+        <li>Live demo is preferred for Integrators (higher-touch, peer conversation)</li>
+        <li>Self-serve trial is fine for companies (let the product sell itself)</li>
+        <li>Calendly link: calendly.com/kevin-trinityoneconsulting</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Objection 5 -->
+  <div class="objection-box">
+    <div class="objection-header">Objection 5: "What if you go away? You're a solo founder"</div>
+    <div class="objection-body">
+      <div class="objection-label">Response Framework:</div>
+      <div class="objection-quote">"Fair question. Three things: First, the product runs on standard infrastructure &mdash; Supabase (Postgres), React, Netlify. There's no proprietary lock-in. Your data is always exportable. Second, my consulting business generates revenue independently of the software &mdash; I'm not burning through VC funding hoping to find product-market fit. Third, you're getting direct access to the founder. I'm not going anywhere, and neither is the consulting practice that funds this."</div>
+      <div class="objection-label">Key Points:</div>
+      <ul class="objection-points">
+        <li>Standard tech stack = no proprietary risk</li>
+        <li>Consulting revenue sustains the business independently</li>
+        <li>No VC pressure or runway concerns</li>
+        <li>Direct founder access is a feature, not a risk</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SECTION 4: CLOSING PROCESS ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">4</span>
+    <span class="section-title">Closing Process</span>
+  </div>
+
+  <h3 class="sub-header">For Companies</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 80px;">Day</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>Trial activated (14 days)</td></tr>
+      <tr><td>1</td><td>Welcome email (automated via MailerLite)</td></tr>
+      <tr><td>3</td><td>Check: Did they create a Blueprint and invite team?</td></tr>
+      <tr><td>7</td><td><strong>Check-in call</strong> (15 min) &mdash; "How's the setup going? What questions do you have?"</td></tr>
+      <tr><td>10</td><td>AI feature preview email (upsell to Pro if on Cadence trial)</td></tr>
+      <tr><td>12</td><td><strong>Conversion call</strong> (15 min) &mdash; "Your trial ends in 2 days. Ready to pick a plan?"</td></tr>
+      <tr><td>14</td><td>Trial expires. Follow-up email if not converted.</td></tr>
+      <tr><td>21</td><td>Final follow-up. If no response, archive and revisit in 90 days.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-header">For Integrators</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 80px;">Day</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>Demo completed. Trial activated.</td></tr>
+      <tr><td>1</td><td>Send competitive one-pager + pricing math for their specific client count</td></tr>
+      <tr><td>3</td><td><strong>Onboarding call</strong> (60 min) &mdash; Platform walkthrough</td></tr>
+      <tr><td>7</td><td>Help set up first client org (30 min)</td></tr>
+      <tr><td>10</td><td>Translation Guide review (15 min)</td></tr>
+      <tr><td>14</td><td><strong>First client Huddle</strong> &mdash; offer to ride-along as silent observer</td></tr>
+      <tr><td>30</td><td><strong>30-day check-in</strong> &mdash; feedback, testimonial ask, partner agreement if converting</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ====== SECTION 5: PRICING GUARDRAILS ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">5</span>
+    <span class="section-title">Pricing Negotiation Guardrails</span>
+  </div>
+
+  <ul class="guardrail-list">
+    <li><strong>Annual billing discount (20% off) is the only pricing lever.</strong> No custom pricing.</li>
+    <li><strong>No free trial extensions beyond 14 days.</strong> If they need more time, offer a demo call instead.</li>
+    <li><strong>Fractional tier pricing is non-negotiable.</strong> The math speaks for itself.</li>
+    <li><strong>Volume discounts:</strong> Not available in Phase 1. Revisit at 50+ subscribers.</li>
+    <li><strong>Non-profit/education discount:</strong> Not established yet. Handle case-by-case. Max 20% off.</li>
+  </ul>
+</div>
+
+<!-- ====== SECTION 6: CRM PIPELINE ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">6</span>
+    <span class="section-title">CRM Pipeline Stages (Zoho)</span>
+  </div>
+
+  <h3 class="sub-header">Company Pipeline</h3>
+
+  <table class="pipeline-table">
+    <thead>
+      <tr>
+        <th style="width: 60px;">Stage</th>
+        <th style="width: 160px;">Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Lead</td><td>Inbound signup, form submission, or referral</td></tr>
+      <tr><td>2</td><td>Trial Active</td><td>14-day trial started</td></tr>
+      <tr><td>3</td><td>Demo Completed</td><td>Had a live demo with KP</td></tr>
+      <tr><td>4</td><td>Proposal Sent</td><td>Pricing discussed, plan recommended</td></tr>
+      <tr><td>5</td><td>Converted</td><td>Paid subscription active</td></tr>
+      <tr><td>6</td><td>Churned</td><td>Canceled or trial expired without converting</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-header">Integrator Partner Pipeline</h3>
+
+  <table class="pipeline-table">
+    <thead>
+      <tr>
+        <th style="width: 60px;">Stage</th>
+        <th style="width: 160px;">Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Identified</td><td>Known Integrator/Implementer contact</td></tr>
+      <tr><td>2</td><td>Outreach Sent</td><td>Personal email sent</td></tr>
+      <tr><td>3</td><td>Demo Scheduled</td><td>Calendly booking confirmed</td></tr>
+      <tr><td>4</td><td>Demo Completed</td><td>Peer demo done</td></tr>
+      <tr><td>5</td><td>Trial Active</td><td>Integrator exploring the product</td></tr>
+      <tr><td>6</td><td>Onboarding</td><td>High-touch onboarding in progress</td></tr>
+      <tr><td>7</td><td>Partner Active</td><td>Paying fractional tier, actively using with clients</td></tr>
+      <tr><td>8</td><td>Founding Partner</td><td>Formal agreement signed, roadmap input</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ====== SECTION 7: KEY ASSETS ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">7</span>
+    <span class="section-title">Key Assets &amp; Links</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 220px;">Asset</th>
+        <th>Location / URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Landing page</td><td>trinityoneconsulting.com/cadence</td></tr>
+      <tr><td>Competitive one-pager</td><td>/Trinity Cadence/competitive-one-pager.html (print to PDF)</td></tr>
+      <tr><td>Sales deck</td><td>/Trinity Cadence/sales-deck.md (convert to Google Slides)</td></tr>
+      <tr><td>Demo booking</td><td>calendly.com/kevin-trinityoneconsulting</td></tr>
+      <tr><td>App signup</td><td>app.trinitycadence.com/signup</td></tr>
+      <tr><td>Trinity One Consulting</td><td>trinityoneconsulting.com</td></tr>
+      <tr><td>Email</td><td>kevin@trinityoneconsulting.com</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ====== SECTION 8: TRADEMARK REMINDERS ====== -->
+<div class="section">
+  <div class="page-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <span class="page-header-text">Trinity Cadence &mdash; Sales Playbook</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-number">8</span>
+    <span class="section-title">Trademark Reminders</span>
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-box-header">NEVER use these terms in external-facing sales materials:</div>
+    <ul>
+      <li>L10, Level 10 Meeting</li>
+      <li>Rocks</li>
+      <li>Scorecard</li>
+      <li>IDS</li>
+      <li>V/TO, Vision/Traction Organizer</li>
+      <li>People Analyzer</li>
+      <li>GWC</li>
+      <li>Accountability Chart</li>
+      <li>Core Focus</li>
+      <li>10-Year Target</li>
+      <li>3-Year Picture</li>
+      <li>Quarterly Conversations</li>
+    </ul>
+  </div>
+
+  <div class="success-box">
+    <div class="success-box-header">ALWAYS use Trinity Cadence vocabulary instead.</div>
+    <p>The Translation Guide exists inside the product for user reference, and that is the ONLY appropriate place for EOS-specific terms (clearly attributed to EOS Worldwide).</p>
+  </div>
+</div>
+
+</body>
+</html>
