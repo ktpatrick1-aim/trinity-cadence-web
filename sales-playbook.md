@@ -180,11 +180,11 @@ Use these in a peer-to-peer demo conversation — not a sales pitch.
 
 | Asset | Location |
 |-------|----------|
-| Landing page | trinityoneconsulting.com/cadence |
+| Landing page | cadence.trinityoneconsulting.com |
 | Competitive one-pager | /Trinity Cadence/competitive-one-pager.html (print to PDF) |
 | Sales deck | /Trinity Cadence/sales-deck.md (convert to Google Slides) |
 | Demo booking | calendly.com/kevin-trinityoneconsulting |
-| App signup | app.trinitycadence.com/signup |
+| App signup | app.cadence.trinityoneconsulting.com/signup |
 | Trinity One Consulting | trinityoneconsulting.com |
 | Email | kevin@trinityoneconsulting.com |
 

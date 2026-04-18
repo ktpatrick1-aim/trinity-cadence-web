@@ -11,7 +11,7 @@
 
 The AI-Native Operating System for Business Cadence
 
-trinityoneconsulting.com/cadence | A product of Trinity One Consulting
+cadence.trinityoneconsulting.com | A product of Trinity One Consulting
 
 ---
 
@@ -189,7 +189,7 @@ Every template gives your team a head start. Customize from a strong foundation,
 **Three Ways to Start**
 
 ### 1. Free Trial (Self-Serve)
-→ Sign up at trinityoneconsulting.com/cadence
+→ Sign up at cadence.trinityoneconsulting.com
 → Create your org, invite your team
 → 14 days, full access, no credit card
 
@@ -210,7 +210,7 @@ Every template gives your team a head start. Customize from a strong foundation,
 **Forge the business. Calibrate the systems. Run the Cadence.**
 
 **Trinity Cadence**
-trinityoneconsulting.com/cadence
+cadence.trinityoneconsulting.com
 kevin@trinityoneconsulting.com
 
 **Book a Demo:**
