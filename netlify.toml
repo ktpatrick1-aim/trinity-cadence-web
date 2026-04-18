@@ -1,11 +1,6 @@
 [build]
   publish = "."
   command = "echo 'Static site'"
-
-[[edge_functions]]
-  function = "track-visitor"
-  path = "/*"
-
 [[headers]]
   for = "/*"
   [headers.values]
