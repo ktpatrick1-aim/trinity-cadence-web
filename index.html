@@ -125,16 +125,14 @@
 
   <!-- Audience Tab Switcher -->
   <div class="audience-switcher container">
-    <div class="tab-switcher">
-      <button class="tab-btn active" data-track="companies">For Companies</button>
-      <button class="tab-btn" data-track="practitioners">For Practitioners</button>
-    </div>
+    <button class="audience-tab active" data-audience="companies">For Companies</button>
+    <button class="audience-tab" data-audience="practitioners">For Practitioners</button>
   </div>
 
   <!-- ============================================ -->
   <!-- COMPANIES TRACK -->
   <!-- ============================================ -->
-  <div id="track-companies" class="audience-content active">
+  <div class="audience-content active" data-audience="companies">
 
     <!-- Six Pillars -->
     <section id="features" class="section">
@@ -372,7 +370,7 @@
   <!-- ============================================ -->
   <!-- PRACTITIONERS TRACK -->
   <!-- ============================================ -->
-  <div id="track-practitioners" class="audience-content">
+  <div class="audience-content" data-audience="practitioners">
 
     <!-- Cost Comparison -->
     <section class="section">
