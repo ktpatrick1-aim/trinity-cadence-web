@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Cadence — Integrator Outreach Campaign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page { size: letter; margin: 0.6in; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1a1a2e;
+      background: #ffffff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.6in;
+      font-size: 9.5pt;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Header */
+    .doc-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #7C3AED;
+    }
+    .doc-header svg { width: 36px; height: 36px; flex-shrink: 0; }
+    .doc-header h1 { font-size: 16pt; font-weight: 800; color: #7C3AED; }
+    .doc-header .subtitle { font-size: 9pt; color: #64748b; }
+
+    .doc-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #94a3b8;
+      margin-bottom: 20px;
+      padding-top: 4px;
+    }
+    .confidential { color: #DC2626; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Table of Contents */
+    .toc {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .toc h3 { font-size: 10pt; font-weight: 700; margin-bottom: 8px; color: #334155; }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 9pt; color: #64748b; padding: 2px 0; }
+
+    /* Section headers */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 28px 0 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #7C3AED;
+      page-break-after: avoid;
+    }
+    .section-number {
+      width: 28px; height: 28px;
+      background: #7C3AED;
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9pt; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .section-header h2 { font-size: 12pt; font-weight: 800; color: #1a1a2e; }
+
+    /* Sub-headers */
+    h3 { font-size: 10pt; font-weight: 700; color: #5B21B6; margin: 16px 0 8px; }
+    h4 { font-size: 9pt; font-weight: 700; color: #334155; margin: 12px 0 4px; }
+
+    /* Email blocks */
+    .email-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #7C3AED;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 10px 0 16px;
+      page-break-inside: avoid;
+    }
+    .email-block .day-badge {
+      display: inline-block;
+      background: #7C3AED;
+      color: white;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .email-block .email-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+
+    /* Subject lines */
+    .subject-lines {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px 0 10px;
+    }
+    .subject-lines .label {
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #7C3AED;
+      margin-bottom: 4px;
+    }
+    .subject-lines ol { padding-left: 16px; }
+    .subject-lines li { font-size: 8.5pt; color: #334155; padding: 1px 0; }
+
+    /* Email body */
+    .email-body {
+      font-size: 9pt;
+      color: #334155;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+    .email-body .greeting { color: #64748b; }
+    .email-body .signature { color: #64748b; margin-top: 8px; }
+
+    /* LinkedIn block */
+    .linkedin-block {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-left: 4px solid #0284c7;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 10px 0 16px;
+      page-break-inside: avoid;
+    }
+    .linkedin-block .platform-badge {
+      display: inline-block;
+      background: #0284c7;
+      color: white;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .linkedin-block .char-count {
+      font-size: 7.5pt;
+      color: #94a3b8;
+      float: right;
+    }
+
+    /* Compliance table */
+    .compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      margin: 8px 0;
+    }
+    .compliance-table th {
+      background: #1a1a2e;
+      color: white;
+      padding: 6px 10px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 8pt;
+    }
+    .compliance-table th.safe { background: #059669; }
+    .compliance-table th.danger { background: #DC2626; }
+    .compliance-table td {
+      padding: 5px 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .compliance-table tr:nth-child(even) td { background: #f8fafc; }
+    .compliance-table .no { color: #DC2626; font-weight: 600; }
+    .compliance-table .yes { color: #059669; font-weight: 600; }
+
+    /* Warning box */
+    .warning-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #DC2626;
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      margin: 10px 0;
+      font-size: 8.5pt;
+    }
+    .warning-box strong { color: #DC2626; }
+
+    /* Safe box */
+    .safe-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #059669;
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      margin: 10px 0;
+      font-size: 8.5pt;
+    }
+    .safe-box strong { color: #059669; }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 4px 0 4px 20px;
+      position: relative;
+      font-size: 8.5pt;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 12px; height: 12px;
+      border: 2px solid #7C3AED;
+      border-radius: 3px;
+    }
+
+    /* Page breaks */
+    .page-break { page-break-before: always; }
+
+    /* Footer */
+    .doc-footer {
+      margin-top: 24px;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 7.5pt;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media print {
+      body { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="doc-header">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="5" y1="20" x2="12" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <line x1="28" y1="20" x2="35" y2="20" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M 20 7 Q 27 7 27 14 Q 27 20 20 24" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 27 14 Q 27 20 23 25 Q 17 30 10 27" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 10 27 Q 7 24 10 17 Q 13 10 20 7" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20" cy="18" r="3" fill="#7C3AED" opacity="0.2"/>
+    </svg>
+    <div>
+      <h1>Integrator Outreach Campaign</h1>
+      <div class="subtitle">Trinity Cadence — Phase 1 Partner Acquisition</div>
+    </div>
+  </div>
+  <div class="doc-meta">
+    <span>Trinity One Consulting | kevin@trinityoneconsulting.com</span>
+    <span class="confidential">Confidential &mdash; Internal Use Only</span>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li>Email Outreach Sequence (5 emails, Days 1-14)</li>
+      <li>LinkedIn Message Templates (3 messages)</li>
+      <li>Post-Demo Follow-Up Sequence (3 emails)</li>
+      <li>Trademark Compliance Checklist</li>
+      <li>Pre-Send Scan Process</li>
+    </ol>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: EMAIL OUTREACH SEQUENCE -->
+  <!-- ============================================ -->
+  <div class="section-header">
+    <div class="section-number">1</div>
+    <h2>Email Outreach Sequence</h2>
+  </div>
+  <p style="font-size:8.5pt; color:#64748b; margin-bottom:14px;">Personal emails from KP. Peer-to-peer tone. 100-150 words max. Auto-stop on any reply. Copy into SalesHandy as a 5-step sequence.</p>
+
+  <!-- Email 1 -->
+  <div class="email-block">
+    <div class="day-badge">Day 1 &mdash; The Opener</div>
+    <div class="email-title">Introduce yourself as a peer who built something</div>
+
+    <div class="subject-lines">
+      <div class="label">Subject Line Options (A/B test)</div>
+      <ol>
+        <li>Built something for how we actually work</li>
+        <li>One practitioner to another &mdash; quick question</li>
+        <li>The tool I wished existed for 10 years</li>
+        <li>What are you paying per seat across all your client orgs?</li>
+        <li>Fellow Integrator &mdash; built something you should see</li>
+      </ol>
+    </div>
+
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+I'm KP &mdash; Fractional COO and Integrator, 30+ years in operations. I run weekly leadership meetings with my own clients every Monday.
+
+I got tired of paying per-seat across every client org for tools that weren't built for how we actually work. So I built my own platform: Trinity Cadence.
+
+Flat-rate pricing. AI built into every workflow. No trademark dependencies. One login across all client orgs.
+
+If you're managing multiple client organizations and paying per-seat for each one, the math alone is worth a 15-minute look.
+
+Want me to walk you through it?
+calendly.com/kevin-trinityoneconsulting
+
+<span class="signature">&mdash; KP
+
+Kevin Patrick
+Fractional COO & Integrator | Trinity One Consulting</span></div>
+  </div>
+
+  <!-- Email 2 -->
+  <div class="email-block">
+    <div class="day-badge">Day 4 &mdash; The Math</div>
+    <div class="email-title">Show the flat-rate pricing advantage with real numbers</div>
+
+    <div class="subject-lines">
+      <div class="label">Subject Line Options</div>
+      <ol>
+        <li>Quick math on what you might be overpaying</li>
+        <li>$800/mo vs $99/mo &mdash; same number of clients</li>
+        <li>The flat-rate math for 5 client orgs</li>
+        <li>Your platform cost might be 8x what it needs to be</li>
+        <li>What 5 orgs and 8 users actually costs</li>
+      </ol>
+    </div>
+
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+Quick follow-up with some math that changed how I think about tooling costs.
+
+If you're running 5 client orgs with ~8 users each on a per-seat tool, you're likely paying around $800/month just for platform access.
+
+I pay $99/month. Flat rate. Unlimited users. All my client orgs included.
+
+That's not a typo. I built Trinity Cadence specifically so practitioners like us stop subsidizing a pricing model designed for single-company buyers.
+
+15 minutes to see it:
+calendly.com/kevin-trinityoneconsulting
+
+<span class="signature">&mdash; KP</span></div>
+  </div>
+
+  <!-- Email 3 -->
+  <div class="email-block page-break">
+    <div class="day-badge">Day 7 &mdash; The AI Angle</div>
+    <div class="email-title">Show what AI does in the actual workflow</div>
+
+    <div class="subject-lines">
+      <div class="label">Subject Line Options</div>
+      <ol>
+        <li>What AI actually does in my Monday meetings</li>
+        <li>My meetings got 30% shorter &mdash; here's why</li>
+        <li>AI that coaches during the meeting, not after</li>
+        <li>The Monday Briefing I get before my first client call</li>
+        <li>6 AI features I use every week with clients</li>
+      </ol>
+    </div>
+
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+One more thing I haven't mentioned &mdash; Trinity Cadence is AI-native, not AI-bolted-on.
+
+Before my Monday meetings, I get an AI-generated briefing: off-track metrics, overdue priorities, patterns in the issues list. During the meeting, AI coaching nudges the conversation when it stalls. After, it writes the summary and creates the action items.
+
+Six AI features total &mdash; anomaly detection, issue clustering, priority drafting, meeting summaries, coaching, and the Monday Briefing.
+
+None of this replaces the facilitator. It makes you better at the job.
+
+Worth 15 minutes?
+calendly.com/kevin-trinityoneconsulting
+
+<span class="signature">&mdash; KP</span></div>
+  </div>
+
+  <!-- Email 4 -->
+  <div class="email-block">
+    <div class="day-badge">Day 10 &mdash; The Trust Angle</div>
+    <div class="email-title">Address the #1 fear: "Will you steal my clients?"</div>
+
+    <div class="subject-lines">
+      <div class="label">Subject Line Options</div>
+      <ol>
+        <li>I also wrote you a Partner Promise</li>
+        <li>Your clients stay yours &mdash; here's my commitment</li>
+        <li>I'm a practitioner, not a platform trying to replace you</li>
+        <li>The commitment I make to every practitioner who joins</li>
+        <li>A platform that supports your work, not competes with it</li>
+      </ol>
+    </div>
+
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+I know what it feels like to bring clients onto a platform and worry whether the vendor will eventually go around you.
+
+So I wrote a Partner Promise &mdash; six commitments in writing. No consulting to your clients. No poaching. Transparent attribution. Your methodology, your relationship.
+
+Trinity Cadence is a platform, not a competing practice. I'm an Integrator myself. I understand the trust equation.
+
+If you've got 15 minutes, I'd rather show you than tell you:
+calendly.com/kevin-trinityoneconsulting
+
+<span class="signature">&mdash; KP</span></div>
+  </div>
+
+  <!-- Email 5 -->
+  <div class="email-block">
+    <div class="day-badge">Day 14 &mdash; The Closer</div>
+    <div class="email-title">Graceful exit with summary of value props</div>
+
+    <div class="subject-lines">
+      <div class="label">Subject Line Options</div>
+      <ol>
+        <li>Last note from me &mdash; no hard feelings either way</li>
+        <li>Not trying to sell &mdash; just sharing what I built</li>
+        <li>If the timing isn't right, no worries</li>
+        <li>One last thing, then I'll leave you alone</li>
+        <li>Happy to reconnect whenever the timing is right</li>
+      </ol>
+    </div>
+
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+This is my last note on this. No pressure.
+
+Quick summary of what Trinity Cadence offers practitioners like us:
+
+&bull; Flat-rate pricing ($49/$99/$199 per month, not per seat)
+&bull; AI built into every workflow (6 features, not a bolt-on)
+&bull; Built by a Fractional COO who uses it every Monday
+&bull; 16 industry-grounded process templates
+&bull; Multi-org switcher, audit log, Translation Guide
+
+If the timing is ever right, I'm here:
+calendly.com/kevin-trinityoneconsulting
+
+Or start a free trial anytime:
+app.cadence.trinityoneconsulting.com/signup
+
+<span class="signature">All the best,
+KP</span></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: LINKEDIN TEMPLATES -->
+  <!-- ============================================ -->
+  <div class="section-header page-break">
+    <div class="section-number">2</div>
+    <h2>LinkedIn Message Templates</h2>
+  </div>
+
+  <div class="linkedin-block">
+    <div class="platform-badge">Connection Request</div>
+    <span class="char-count">248 characters</span>
+    <div class="email-body" style="margin-top:8px;">Hi [First Name] &mdash; I'm a Fractional COO & Integrator (30+ yrs). Built an AI-native platform for practitioners running structured business cadence. Not selling, just connecting with peers doing similar work. Would love to connect.</div>
+  </div>
+
+  <div class="linkedin-block">
+    <div class="platform-badge">After Connection Accepted</div>
+    <div class="email-body" style="margin-top:8px;">Thanks for connecting, [First Name]. Quick context on me: I run weekly leadership meetings with my own clients and got frustrated enough with per-seat tooling to build my own platform (Trinity Cadence).
+
+If you're managing multiple client organizations, two things might interest you:
+
+1. Flat-rate pricing instead of per-seat across every client org
+2. AI features built into the weekly meeting workflow &mdash; not bolted on
+
+No pitch. Happy to do a 15-min peer walkthrough if you're curious. If not, I'm just glad to be connected with a fellow practitioner.
+
+calendly.com/kevin-trinityoneconsulting</div>
+  </div>
+
+  <div class="linkedin-block">
+    <div class="platform-badge">Gentle Bump (7-10 days later)</div>
+    <div class="email-body" style="margin-top:8px;">Hi [First Name] &mdash; just bumping this in case it got buried. I know how full the inbox gets.
+
+Short version: I built a flat-rate, AI-native platform for Integrators and Fractional COOs managing multiple client orgs. Happy to show you the 5-minute version anytime.
+
+Or if it's not relevant to your practice, no worries at all. Glad to be connected regardless.</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: POST-DEMO FOLLOW-UP -->
+  <!-- ============================================ -->
+  <div class="section-header page-break">
+    <div class="section-number">3</div>
+    <h2>Post-Demo Follow-Up Sequence</h2>
+  </div>
+  <p style="font-size:8.5pt; color:#64748b; margin-bottom:14px;">Sent manually from KP's inbox after a live demo. Personalize based on the conversation.</p>
+
+  <div class="email-block">
+    <div class="day-badge">Same Day &mdash; Recap</div>
+    <div class="email-title">Subject: Good talking today &mdash; here's everything in one place</div>
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+Thanks for taking the time today. It was a great conversation.
+
+Here's everything we discussed in one place:
+
+&bull; Competitive one-pager (attached)
+&bull; Your pricing: [Starter $49 / Professional $99 / Practice $199] for [X] client orgs
+&bull; Start a trial: app.cadence.trinityoneconsulting.com/signup
+
+Based on what you shared about your current setup ([X orgs, ~Y users each]), the math works out to roughly $[current cost]/month on per-seat pricing vs. $[Trinity price]/month flat.
+
+I'm around if any questions come up. Happy to help you set up your first client org if you start a trial.
+
+<span class="signature">&mdash; KP</span></div>
+    <p style="font-size:8pt; color:#7C3AED; font-weight:600; margin-top:6px;">Attach: competitive-one-pager.pdf</p>
+  </div>
+
+  <div class="email-block">
+    <div class="day-badge">Day 5 &mdash; Specific Follow-Up</div>
+    <div class="email-title">Subject: Quick thought on [specific pain point from demo]</div>
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+Been thinking about what you mentioned during our call about [specific pain point or question they raised &mdash; e.g., "onboarding new clients being a hassle" or "wanting AI that actually helps during facilitation"].
+
+That's exactly what [relevant feature &mdash; e.g., "the 16 Playbook templates" or "the AI Monday Briefing"] was designed to solve. I use it with my own clients and it's become the part of the workflow I'd miss most.
+
+If you want to kick the tires, the 14-day trial gives you full access to everything &mdash; including the AI features:
+app.cadence.trinityoneconsulting.com/signup
+
+No pressure. Just didn't want that thread to go cold.
+
+<span class="signature">&mdash; KP</span></div>
+  </div>
+
+  <div class="email-block">
+    <div class="day-badge">Day 10 &mdash; Last Touch</div>
+    <div class="email-title">Subject: Still here if the timing works</div>
+    <div class="email-body"><span class="greeting">Hi [First Name],</span>
+
+Last follow-up from me on this. I know timing matters more than interest sometimes.
+
+Three things worth remembering when you're ready:
+
+1. 14-day free trial, no credit card: app.cadence.trinityoneconsulting.com/signup
+2. I'll personally help you set up your first client org (60-min onboarding call)
+3. Founding Partner spots include locked-in pricing and roadmap input
+
+Whenever the timing is right, I'm a Calendly link away:
+calendly.com/kevin-trinityoneconsulting
+
+<span class="signature">All the best,
+KP</span></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: TRADEMARK COMPLIANCE -->
+  <!-- ============================================ -->
+  <div class="section-header page-break">
+    <div class="section-number">4</div>
+    <h2>Trademark Compliance Checklist</h2>
+  </div>
+
+  <div class="warning-box">
+    <strong>EOS&reg; Trademarked Terms &mdash; NEVER use in outreach, emails, LinkedIn, or marketing materials.</strong>
+    <p style="margin-top:4px;">These are trademarks of EOS Worldwide. Using them in sales materials creates legal risk.</p>
+  </div>
+
+  <table class="compliance-table">
+    <thead>
+      <tr>
+        <th class="danger" style="width:40%;">DO NOT USE (Trademarked)</th>
+        <th class="safe" style="width:60%;">USE INSTEAD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="no">L10 / Level 10 Meeting&trade;</td><td class="yes">The Huddle / weekly leadership meeting</td></tr>
+      <tr><td class="no">Rocks</td><td class="yes">Anchors / 90-day priorities / quarterly priorities</td></tr>
+      <tr><td class="no">Scorecard</td><td class="yes">The Pulse / weekly scorecard / weekly metrics</td></tr>
+      <tr><td class="no">IDS&trade; (Identify, Discuss, Solve)</td><td class="yes">The Forge Loop (Surface, Shape, Solve) / issue resolution</td></tr>
+      <tr><td class="no">V/TO&trade; / Vision/Traction Organizer</td><td class="yes">The Blueprint / strategic plan / vision document</td></tr>
+      <tr><td class="no">People Analyzer&trade;</td><td class="yes">The Fit Check / people evaluation</td></tr>
+      <tr><td class="no">GWC&trade; (Get it, Want it, Capacity)</td><td class="yes">Grasp, Drive, Capacity</td></tr>
+      <tr><td class="no">Accountability Chart</td><td class="yes">The Seat Map / org structure / org chart</td></tr>
+      <tr><td class="no">Core Focus&trade;</td><td class="yes">True North / purpose and niche</td></tr>
+      <tr><td class="no">10-Year Target&trade;</td><td class="yes">Horizon</td></tr>
+      <tr><td class="no">3-Year Picture&trade;</td><td class="yes">Vista</td></tr>
+      <tr><td class="no">Quarterly Conversations&trade;</td><td class="yes">The Check-In / quarterly reviews</td></tr>
+    </tbody>
+  </table>
+
+  <div class="safe-box">
+    <strong>Safe Generic Terms (not trademarked):</strong>
+    <p style="margin-top:4px;">business operating system, weekly leadership meeting, quarterly priorities, 90-day priorities, weekly scorecard, weekly metrics, issue resolution, issues list, strategic plan, vision document, org chart, org structure, Integrator (as role title), Fractional COO, business cadence, operating cadence</p>
+  </div>
+
+  <div class="safe-box">
+    <strong>Safe References to EOS as a Concept:</strong>
+    <p style="margin-top:4px;">"if you're implementing a business operating system..." / "practitioners running structured operating cadence..." / "anyone using a framework-driven approach to leadership meetings and quarterly planning..."</p>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: PRE-SEND SCAN -->
+  <!-- ============================================ -->
+  <div class="section-header">
+    <div class="section-number">5</div>
+    <h2>Pre-Send Scan Process (5 seconds)</h2>
+  </div>
+
+  <p style="font-size:9pt; margin-bottom:10px;">Run this checklist before sending ANY outreach email, LinkedIn message, or marketing material:</p>
+
+  <ul class="checklist">
+    <li><strong>Ctrl+F / Cmd+F</strong> for: L10, Rock, Scorecard, IDS, V/TO, GWC, People Analyzer, Accountability Chart, Core Focus, 10-Year, 3-Year, Quarterly Conversation</li>
+    <li>If ANY match is found: replace with the Trinity Cadence equivalent from the table above</li>
+    <li>If referencing a competitor by name: remove it (save competitor references for live demos only)</li>
+    <li>If describing what the product does: use generic terms ("weekly leadership meeting," "90-day priorities") or Trinity vocabulary (Huddle, Anchors, Pulse)</li>
+    <li><strong>Read the email aloud.</strong> Does it sound like a peer sharing a tool, or a salesperson pitching? If the latter, rewrite.</li>
+  </ul>
+
+  <!-- Footer -->
+  <div class="doc-footer">
+    <span>Trinity Cadence &mdash; A product of Trinity One Consulting</span>
+    <span>cadence.trinityoneconsulting.com</span>
+  </div>
+
+</body>
+</html>
