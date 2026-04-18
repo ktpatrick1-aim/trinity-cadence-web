@@ -195,7 +195,7 @@ Every template gives your team a head start. Customize from a strong foundation,
 
 ### 2. Book a Demo
 → 30-minute walkthrough with Kevin
-→ calendly.com/kevin-trinityoneconsulting
+→ calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick
 → See real product, ask real questions
 
 ### 3. Founding Partner Program (Integrators Only)
@@ -214,7 +214,7 @@ cadence.trinityoneconsulting.com
 kevin@trinityoneconsulting.com
 
 **Book a Demo:**
-calendly.com/kevin-trinityoneconsulting
+calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick
 
 **Trinity One Consulting**
 trinityoneconsulting.com

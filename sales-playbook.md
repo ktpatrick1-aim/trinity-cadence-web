@@ -100,7 +100,7 @@ Use these in a peer-to-peer demo conversation — not a sales pitch.
 - Always offer both: live demo AND self-serve trial
 - Live demo is preferred for Integrators (higher-touch, peer conversation)
 - Self-serve trial is fine for companies (let the product sell itself)
-- Calendly link: calendly.com/kevin-trinityoneconsulting
+- Calendly link: calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick
 
 ### 5. "What if you go away? You're a solo founder"
 
@@ -183,7 +183,7 @@ Use these in a peer-to-peer demo conversation — not a sales pitch.
 | Landing page | cadence.trinityoneconsulting.com |
 | Competitive one-pager | /Trinity Cadence/competitive-one-pager.html (print to PDF) |
 | Sales deck | /Trinity Cadence/sales-deck.md (convert to Google Slides) |
-| Demo booking | calendly.com/kevin-trinityoneconsulting |
+| Demo booking | calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick |
 | App signup | app.cadence.trinityoneconsulting.com/signup |
 | Trinity One Consulting | trinityoneconsulting.com |
 | Email | kevin@trinityoneconsulting.com |
