@@ -3,248 +3,388 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Trinity Cadence Partner Promise</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K298GPG5');</script>
+  <!-- End Google Tag Manager -->
+  <title>Partner Promise | Trinity Cadence — Our Commitment to Practitioners</title>
+  <meta name="description" content="Six commitments, in writing, from Trinity Cadence to every Practitioner who brings a client onto the platform. No consulting to your clients. No poaching. Transparent attribution. Your methodology, your relationship.">
+  <meta name="keywords" content="Trinity Cadence partner, practitioner promise, consulting non-compete, EOS integrator platform">
+  <link rel="canonical" href="https://cadence.trinityoneconsulting.com/partner-promise.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cadence.trinityoneconsulting.com/partner-promise.html">
+  <meta property="og:title" content="Partner Promise | Trinity Cadence">
+  <meta property="og:description" content="Six commitments, in writing, from Trinity Cadence to every Practitioner partner.">
+  <meta property="og:site_name" content="Trinity Cadence">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Partner Promise | Trinity Cadence">
+  <meta name="twitter:description" content="Six commitments, in writing, from Trinity Cadence to every Practitioner partner.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    @page {
-      size: letter;
-      margin: 0.6in 0.7in;
+    /* ===== Partner Promise — page-specific ===== */
+    .promise-hero { padding-top: 140px; padding-bottom: 40px; }
+    .promise-hero .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--cadence-violet-light);
+      margin-bottom: 16px;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      color: #1a1a2e;
-      background: #ffffff;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.6in 0.7in;
-      font-size: 10pt;
-      line-height: 1.6;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    /* Header */
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 8px;
-      padding-bottom: 14px;
-      border-bottom: 3px solid #7C3AED;
-    }
-
-    .header h1 {
-      font-size: 20pt;
-      font-weight: 800;
-      color: #7C3AED;
+    .promise-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
       letter-spacing: -0.02em;
-      line-height: 1.2;
+      margin-bottom: 18px;
     }
-
-    .subtitle {
-      text-align: center;
-      font-size: 11pt;
-      font-weight: 600;
-      color: #5B21B6;
-      margin: 16px 0 12px;
-      font-style: italic;
-    }
-
-    /* Opening */
-    .opening {
-      margin-bottom: 20px;
-      font-size: 9.5pt;
-      color: #334155;
+    .promise-hero .lede {
+      max-width: 760px;
+      font-size: 1.1rem;
+      color: var(--cadence-text-muted);
       line-height: 1.7;
     }
 
-    /* Commitments */
-    .section-label {
-      font-size: 7.5pt;
+    .promise-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .promise-letter {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px clamp(24px, 5vw, 64px);
+      background: linear-gradient(180deg, rgba(124,58,237,0.06), rgba(15,10,26,0.0));
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .promise-intro {
+      font-size: 1.05rem;
+      color: var(--cadence-text);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(124,58,237,0.18);
+    }
+
+    .promise-intro p + p { margin-top: 14px; }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #7C3AED;
-      margin-bottom: 12px;
+      letter-spacing: 2px;
+      color: var(--cadence-violet-light);
+      margin-bottom: 24px;
+    }
+
+    .commitments {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
     }
 
     .commitment {
       display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 20px;
+      padding: 22px 24px;
+      background: rgba(45, 35, 64, 0.35);
+      border: 1px solid rgba(124,58,237,0.18);
+      border-radius: 14px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .commitment:hover {
+      border-color: rgba(167,139,250,0.45);
+      transform: translateY(-2px);
     }
 
     .commitment-number {
       flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      background: #7C3AED;
-      color: #ffffff;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
+      background: linear-gradient(135deg, var(--cadence-violet), var(--cadence-violet-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 9pt;
-      font-weight: 700;
-      margin-top: 1px;
-    }
-
-    .commitment-content {
-      flex: 1;
+      box-shadow: 0 4px 18px rgba(124,58,237,0.35);
     }
 
     .commitment-content h3 {
-      font-size: 10pt;
+      font-size: 1.1rem;
       font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 2px;
+      color: var(--cadence-cream);
+      margin-bottom: 6px;
+      line-height: 1.3;
     }
 
     .commitment-content p {
-      font-size: 9pt;
-      color: #475569;
-      line-height: 1.55;
+      font-size: 0.98rem;
+      color: var(--cadence-text-muted);
+      line-height: 1.65;
     }
 
-    /* Closing */
-    .closing {
-      margin-top: 20px;
-      padding-top: 16px;
-      border-top: 1px solid #e2e8f0;
-      font-size: 9.5pt;
-      color: #334155;
-      line-height: 1.7;
+    .promise-closing {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(124,58,237,0.18);
+      font-size: 1rem;
+      color: var(--cadence-text);
+      line-height: 1.75;
       font-style: italic;
     }
 
-    /* Signature */
-    .signature {
-      margin-top: 24px;
-      font-size: 9.5pt;
+    .promise-signature {
+      margin-top: 28px;
+      font-size: 0.95rem;
       line-height: 1.6;
     }
-
-    .signature .name {
+    .promise-signature .sig-name {
       font-weight: 700;
-      color: #1a1a2e;
-      font-size: 10pt;
+      color: var(--cadence-cream);
+      font-size: 1rem;
     }
+    .promise-signature .sig-meta { color: var(--cadence-text-muted); }
+    .promise-signature a { color: var(--cadence-violet-light); text-decoration: none; }
+    .promise-signature a:hover { color: var(--cadence-violet-glow); }
 
-    .signature .title,
-    .signature .org,
-    .signature .email {
-      color: #64748b;
-    }
-
-    .signature .email a {
-      color: #7C3AED;
-      text-decoration: none;
-    }
-
-    /* Footer */
-    .footer {
-      margin-top: 28px;
-      padding-top: 10px;
-      border-top: 1px solid #e2e8f0;
-      font-size: 8pt;
-      color: #94a3b8;
-      text-align: center;
-    }
-
+    /* ===== Print styles ===== */
     @media print {
-      body { padding: 0; }
-      .commitment-number { background: #7C3AED !important; color: #ffffff !important; }
+      @page { size: letter; margin: 0.6in 0.7in; }
+      body {
+        background: #ffffff !important;
+        color: #1a1a2e !important;
+        opacity: 1 !important;
+      }
+      .cadence-bg, #particles-canvas, header, footer, .mobile-overlay,
+      .promise-actions, .cta-section { display: none !important; }
+      .promise-hero { padding-top: 0; padding-bottom: 20px; }
+      .promise-hero .eyebrow,
+      .section-eyebrow { color: #7C3AED !important; }
+      .promise-hero h1 { color: #1a1a2e !important; font-size: 22pt; }
+      .promise-hero .lede { color: #334155 !important; font-size: 10.5pt; }
+      .promise-letter {
+        border: none !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .promise-intro { color: #334155 !important; border-bottom-color: #e2e8f0 !important; font-size: 10.5pt; }
+      .commitment {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        page-break-inside: avoid;
+      }
+      .commitment-number {
+        background: #7C3AED !important;
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .commitment-content h3 { color: #1a1a2e !important; }
+      .commitment-content p { color: #475569 !important; }
+      .promise-closing { color: #334155 !important; border-top-color: #e2e8f0 !important; }
+      .promise-signature .sig-name { color: #1a1a2e !important; }
+      .promise-signature .sig-meta { color: #64748b !important; }
+      .promise-signature a { color: #7C3AED !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <img src="logo.png" alt="Trinity Cadence" style="width:40px; height:40px; object-fit:contain;">
-    <h1>The Trinity Cadence Partner Promise</h1>
-  </div>
+  <div class="cadence-bg"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="mobile-overlay"></div>
 
-  <div class="subtitle">Our Commitment to Practitioners</div>
-
-  <!-- Opening -->
-  <div class="opening">
-    I built Trinity Cadence because I needed it &mdash; as a Fractional COO and Integrator running cadence with my own clients. When I decided to make it available to other practitioners, I made myself a promise: the tool would support your work, never compete with it. This document puts that promise in writing.
-  </div>
-
-  <!-- Commitments -->
-  <div class="section-label">Six Commitments</div>
-
-  <div class="commitment">
-    <div class="commitment-number">1</div>
-    <div class="commitment-content">
-      <h3>No Direct Consulting to Partner Clients</h3>
-      <p>Trinity One Consulting will not offer Fractional COO, Integrator, or consulting services to any client organization brought onto Trinity Cadence by a partner &mdash; for the duration of the partner relationship and 12 months after.</p>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="nav-brand">
+          <img src="logo.png" alt="Trinity Cadence" style="width:40px; height:40px; object-fit:contain;">
+          <span>Trinity Cadence</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="ai.html">AI</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="blog/">Blog</a>
+          <a href="contact.html" class="nav-cta">Start Free Trial</a>
+        </div>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="commitment">
-    <div class="commitment-number">2</div>
-    <div class="commitment-content">
-      <h3>No Poaching</h3>
-      <p>Trinity Cadence will not market consulting, facilitation, or implementation services directly to organizations with an active partner relationship. Product communications (feature updates, billing) are the only outbound contact.</p>
+  <!-- Page Hero -->
+  <section class="hero promise-hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">The Partner Promise</span>
+        <h1>Our Commitment <span class="accent">to Practitioners</span></h1>
+        <p class="lede">I built Trinity Cadence because I needed it — as a Fractional COO and Integrator running cadence with my own clients. When I decided to make it available to other Practitioners, I made myself a promise: the tool would support your work, never compete with it. This page puts that promise in writing.</p>
+        <div class="promise-actions">
+          <a href="mailto:kevin@trinityoneconsulting.com?subject=Partner%20Promise%20Question" class="btn btn-primary">Talk to Kevin</a>
+          <button type="button" class="btn btn-secondary" onclick="window.print()">Print / Save PDF</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="commitment">
-    <div class="commitment-number">3</div>
-    <div class="commitment-content">
-      <h3>Transparent Attribution</h3>
-      <p>Partner-referred organizations are permanently tagged in the system. Attribution is visible to both the partner and Trinity Cadence. There is no mechanism to quietly reassign a client.</p>
+  <!-- The Promise Letter -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="promise-letter">
+
+        <div class="promise-intro">
+          <p>You bring the clients. You bring the methodology. You bring the trust that was built over years of sitting in the Integrator seat with them. Trinity Cadence should amplify that work — not quietly angle to replace you.</p>
+          <p>Here's how we make sure that stays true.</p>
+        </div>
+
+        <div class="section-eyebrow">Six Commitments</div>
+
+        <div class="commitments">
+
+          <div class="commitment">
+            <div class="commitment-number">1</div>
+            <div class="commitment-content">
+              <h3>No Direct Consulting to Partner Clients</h3>
+              <p>Trinity One Consulting will not offer Fractional COO, Integrator, or consulting services to any client organization brought onto Trinity Cadence by a partner — for the duration of the partner relationship and 12 months after.</p>
+            </div>
+          </div>
+
+          <div class="commitment">
+            <div class="commitment-number">2</div>
+            <div class="commitment-content">
+              <h3>No Poaching</h3>
+              <p>Trinity Cadence will not market consulting, facilitation, or implementation services directly to organizations with an active partner relationship. Product communications (feature updates, billing) are the only outbound contact.</p>
+            </div>
+          </div>
+
+          <div class="commitment">
+            <div class="commitment-number">3</div>
+            <div class="commitment-content">
+              <h3>Transparent Attribution</h3>
+              <p>Partner-referred organizations are permanently tagged in the system. Attribution is visible to both the partner and Trinity Cadence. There is no mechanism to quietly reassign a client.</p>
+            </div>
+          </div>
+
+          <div class="commitment">
+            <div class="commitment-number">4</div>
+            <div class="commitment-content">
+              <h3>Client Continuity</h3>
+              <p>If a partner disengages from a client, the client retains full access to Trinity Cadence at standard per-seat rates. No lock-in through the partner. No data loss. The client's history, Blueprint, Pulse data, and Playbooks remain intact.</p>
+            </div>
+          </div>
+
+          <div class="commitment">
+            <div class="commitment-number">5</div>
+            <div class="commitment-content">
+              <h3>Partner-First Communication</h3>
+              <p>Product changes, pricing updates, and roadmap shifts are communicated to partners before they reach partner clients. Partners are never surprised by a change their client sees first.</p>
+            </div>
+          </div>
+
+          <div class="commitment">
+            <div class="commitment-number">6</div>
+            <div class="commitment-content">
+              <h3>Your Methodology, Your Relationship</h3>
+              <p>Trinity Cadence is a platform, not a methodology. Partners bring their own facilitation style, coaching approach, and client relationship. Trinity Cadence supports the work — it does not replace the practitioner.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="promise-closing">
+          This isn't a legal contract. It's a professional commitment from one Practitioner to another. If you have questions about how this applies to a specific situation, I'm a phone call away.
+        </div>
+
+        <div class="promise-signature">
+          <div class="sig-name">Kevin Patrick</div>
+          <div class="sig-meta">Fractional COO &amp; Integrator</div>
+          <div class="sig-meta">Trinity One Consulting</div>
+          <div class="sig-meta"><a href="mailto:kevin@trinityoneconsulting.com">kevin@trinityoneconsulting.com</a></div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="commitment">
-    <div class="commitment-number">4</div>
-    <div class="commitment-content">
-      <h3>Client Continuity</h3>
-      <p>If a partner disengages from a client, the client retains full access to Trinity Cadence at standard per-seat rates. No lock-in through the partner. No data loss. The client's history, Blueprint, Pulse data, and Playbooks remain intact.</p>
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Built for Practitioners. <span style="color:var(--cadence-violet-light);">Backed in Writing.</span></h2>
+      <p>See how the Founding Partner Program locks in pricing, attribution, and roadmap input.</p>
+      <div class="cta-buttons">
+        <a href="pricing.html" class="btn btn-primary">See Practitioner Pricing</a>
+        <a href="https://calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick?utm_source=trinitycadence&amp;utm_medium=web&amp;utm_campaign=partner_promise" class="btn-secondary" target="_blank" rel="noopener">Book a Partner Call</a>
+      </div>
     </div>
-  </div>
-
-  <div class="commitment">
-    <div class="commitment-number">5</div>
-    <div class="commitment-content">
-      <h3>Partner-First Communication</h3>
-      <p>Product changes, pricing updates, and roadmap shifts are communicated to partners before they reach partner clients. Partners are never surprised by a change their client sees first.</p>
-    </div>
-  </div>
-
-  <div class="commitment">
-    <div class="commitment-number">6</div>
-    <div class="commitment-content">
-      <h3>Your Methodology, Your Relationship</h3>
-      <p>Trinity Cadence is a platform, not a methodology. Partners bring their own facilitation style, coaching approach, and client relationship. Trinity Cadence supports the work &mdash; it does not replace the practitioner.</p>
-    </div>
-  </div>
-
-  <!-- Closing -->
-  <div class="closing">
-    This isn't a legal contract. It's a professional commitment from one practitioner to another. If you have questions about how this applies to a specific situation, I'm a phone call away.
-  </div>
-
-  <!-- Signature -->
-  <div class="signature">
-    <div class="name">Kevin Patrick</div>
-    <div class="title">Fractional COO &amp; Integrator</div>
-    <div class="org">Trinity One Consulting</div>
-    <div class="email"><a href="mailto:kevin@trinityoneconsulting.com">kevin@trinityoneconsulting.com</a></div>
-  </div>
+  </section>
 
   <!-- Footer -->
-  <div class="footer">
-    Trinity Cadence &mdash; A product of Trinity One Consulting | cadence.trinityoneconsulting.com
-  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Trinity Cadence</div>
+          <p>The AI-native operating system for companies running disciplined business cadence.</p>
+          <p style="margin-top:0.5rem; font-size:0.8rem;">A product of <a href="https://trinityoneconsulting.com" target="_blank" rel="noopener">Trinity One Consulting</a></p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="ai.html">AI</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="https://app.cadence.trinityoneconsulting.com/signup">Free Trial</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="about.html">About</a>
+            <a href="partner-promise.html">Partner Promise</a>
+            <a href="https://trinityoneconsulting.com" target="_blank" rel="noopener">Trinity One Consulting</a>
+            <a href="https://forge.trinityoneconsulting.com" target="_blank" rel="noopener">Trinity Forge</a>
+            <a href="https://calibrate.trinityoneconsulting.com" target="_blank" rel="noopener">Trinity Calibrate</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="contact.html">Contact</a>
+            <a href="https://calendly.com/kevin-trinityoneconsulting/30-minute-trinity-one-cadence-call-with-kevin-patrick?utm_source=trinitycadence&amp;utm_medium=web&amp;utm_campaign=discovery_call" target="_blank" rel="noopener">Book a Demo</a>
+            <a href="mailto:kevin@trinityoneconsulting.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Trinity One Consulting. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
+  <script src="app.js"></script>
+
+<!-- RB2B Visitor Identification -->
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("GNLKQH78R96Q");</script>
 </body>
 </html>
