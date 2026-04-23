@@ -23,3 +23,367 @@
   for = "*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# === begin canonical-blog redirects (auto-managed) ===
+
+[[redirects]]
+  from = "/blog/3-questions-that-tell-me-if-youre-ready-for-ai.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/3-questions-that-tell-me-if-youre-ready-for-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/3-questions-that-tell-me-if-youre-ready-for-ai"
+  to = "https://calibrate.trinityoneconsulting.com/blog/3-questions-that-tell-me-if-youre-ready-for-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/3-signs-your-business-is-flying-blind.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/3-signs-your-business-is-flying-blind.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/3-signs-your-business-is-flying-blind"
+  to = "https://calibrate.trinityoneconsulting.com/blog/3-signs-your-business-is-flying-blind.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-for-small-business.html"
+  to = "https://trinityoneconsulting.com/blog/ai-for-small-business"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-for-small-business"
+  to = "https://trinityoneconsulting.com/blog/ai-for-small-business"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/culture-eats-strategy.html"
+  to = "https://trinityoneconsulting.com/blog/culture-eats-strategy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/culture-eats-strategy"
+  to = "https://trinityoneconsulting.com/blog/culture-eats-strategy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/document-processing-the-low-hanging-fruit-of-ai.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/document-processing-the-low-hanging-fruit-of-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/document-processing-the-low-hanging-fruit-of-ai"
+  to = "https://calibrate.trinityoneconsulting.com/blog/document-processing-the-low-hanging-fruit-of-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/faith-football-business-the-leadership-triad.html"
+  to = "https://trinityoneconsulting.com/blog/faith-football-business-the-leadership-triad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/faith-football-business-the-leadership-triad"
+  to = "https://trinityoneconsulting.com/blog/faith-football-business-the-leadership-triad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/retention-problem-isnt-about-compensation.html"
+  to = "https://trinityoneconsulting.com/blog/retention-problem-isnt-about-compensation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/retention-problem-isnt-about-compensation"
+  to = "https://trinityoneconsulting.com/blog/retention-problem-isnt-about-compensation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/season-3-is-here-the-dream-architects.html"
+  to = "https://trinityoneconsulting.com/blog/season-3-is-here-the-dream-architects"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/season-3-is-here-the-dream-architects"
+  to = "https://trinityoneconsulting.com/blog/season-3-is-here-the-dream-architects"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-12-rooms-framework.html"
+  to = "https://trinityoneconsulting.com/blog/the-12-rooms-framework"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-12-rooms-framework"
+  to = "https://trinityoneconsulting.com/blog/the-12-rooms-framework"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-biggest-lie-in-business-consulting.html"
+  to = "https://trinityoneconsulting.com/blog/the-biggest-lie-in-business-consulting"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-biggest-lie-in-business-consulting"
+  to = "https://trinityoneconsulting.com/blog/the-biggest-lie-in-business-consulting"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-dashboard-problem-47-dashboards-zero-decisions.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/the-dashboard-problem-47-dashboards-zero-decisions.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-dashboard-problem-47-dashboards-zero-decisions"
+  to = "https://calibrate.trinityoneconsulting.com/blog/the-dashboard-problem-47-dashboards-zero-decisions.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-difference-between-a-job-and-a-calling.html"
+  to = "https://trinityoneconsulting.com/blog/the-difference-between-a-job-and-a-calling"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-difference-between-a-job-and-a-calling"
+  to = "https://trinityoneconsulting.com/blog/the-difference-between-a-job-and-a-calling"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-dream-architects-season-3.html"
+  to = "https://thedreamdividend.com/blog/the-dream-architects-season-3.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-dream-architects-season-3"
+  to = "https://thedreamdividend.com/blog/the-dream-architects-season-3.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-fear-that-kills-more-businesses-than-bad-ideas.html"
+  to = "https://forge.trinityoneconsulting.com/blog/the-fear-that-kills-more-businesses-than-bad-ideas.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-fear-that-kills-more-businesses-than-bad-ideas"
+  to = "https://forge.trinityoneconsulting.com/blog/the-fear-that-kills-more-businesses-than-bad-ideas.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-human-machine-equation.html"
+  to = "https://trinityoneconsulting.com/blog/the-human-machine-equation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-human-machine-equation"
+  to = "https://trinityoneconsulting.com/blog/the-human-machine-equation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-human-machine-equation-full-breakdown.html"
+  to = "https://trinityoneconsulting.com/blog/the-human-machine-equation-full-breakdown"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-human-machine-equation-full-breakdown"
+  to = "https://trinityoneconsulting.com/blog/the-human-machine-equation-full-breakdown"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-mvp-myth-minimum-viable-isnt-enough.html"
+  to = "https://forge.trinityoneconsulting.com/blog/the-mvp-myth-minimum-viable-isnt-enough.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-mvp-myth-minimum-viable-isnt-enough"
+  to = "https://forge.trinityoneconsulting.com/blog/the-mvp-myth-minimum-viable-isnt-enough.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-question-that-changes-every-organization.html"
+  to = "https://trinityoneconsulting.com/blog/the-question-that-changes-every-organization"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-question-that-changes-every-organization"
+  to = "https://trinityoneconsulting.com/blog/the-question-that-changes-every-organization"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-roi-of-saying-no-to-the-wrong-ai.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/the-roi-of-saying-no-to-the-wrong-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-roi-of-saying-no-to-the-wrong-ai"
+  to = "https://calibrate.trinityoneconsulting.com/blog/the-roi-of-saying-no-to-the-wrong-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-solopreneurs-first-30-days.html"
+  to = "https://forge.trinityoneconsulting.com/blog/the-solopreneurs-first-30-days.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-solopreneurs-first-30-days"
+  to = "https://forge.trinityoneconsulting.com/blog/the-solopreneurs-first-30-days.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-a-50k-startup-budget-looks-like-in-2026.html"
+  to = "https://forge.trinityoneconsulting.com/blog/what-a-50k-startup-budget-looks-like-in-2026.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-a-50k-startup-budget-looks-like-in-2026"
+  to = "https://forge.trinityoneconsulting.com/blog/what-a-50k-startup-budget-looks-like-in-2026.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-does-your-best-employee-dream-about.html"
+  to = "https://trinityoneconsulting.com/blog/what-does-your-best-employee-dream-about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-does-your-best-employee-dream-about"
+  to = "https://trinityoneconsulting.com/blog/what-does-your-best-employee-dream-about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-sap-business-one-taught-me-about-people.html"
+  to = "https://trinityoneconsulting.com/blog/what-sap-business-one-taught-me-about-people"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-sap-business-one-taught-me-about-people"
+  to = "https://trinityoneconsulting.com/blog/what-sap-business-one-taught-me-about-people"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-70-of-erp-implementations-fail.html"
+  to = "https://trinityoneconsulting.com/blog/why-70-of-erp-implementations-fail"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-70-of-erp-implementations-fail"
+  to = "https://trinityoneconsulting.com/blog/why-70-of-erp-implementations-fail"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-dream-management-works.html"
+  to = "https://trinityoneconsulting.com/blog/why-dream-management-works"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-dream-management-works"
+  to = "https://trinityoneconsulting.com/blog/why-dream-management-works"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-i-coach-middle-school-football.html"
+  to = "https://trinityoneconsulting.com/blog/why-i-coach-middle-school-football"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-i-coach-middle-school-football"
+  to = "https://trinityoneconsulting.com/blog/why-i-coach-middle-school-football"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-your-website-isnt-converting.html"
+  to = "https://forge.trinityoneconsulting.com/blog/why-your-website-isnt-converting.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-your-website-isnt-converting"
+  to = "https://forge.trinityoneconsulting.com/blog/why-your-website-isnt-converting.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/you-dont-need-6-months-to-launch.html"
+  to = "https://forge.trinityoneconsulting.com/blog/you-dont-need-6-months-to-launch.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/you-dont-need-6-months-to-launch"
+  to = "https://forge.trinityoneconsulting.com/blog/you-dont-need-6-months-to-launch.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/youre-not-behind-on-ai.html"
+  to = "https://calibrate.trinityoneconsulting.com/blog/youre-not-behind-on-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/youre-not-behind-on-ai"
+  to = "https://calibrate.trinityoneconsulting.com/blog/youre-not-behind-on-ai.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/eos-dream-management-why-the-flywheel-works.html"
+  to = "https://trinityoneconsulting.com/blog/eos-dream-management-why-the-flywheel-works"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/eos-dream-management-why-the-flywheel-works"
+  to = "https://trinityoneconsulting.com/blog/eos-dream-management-why-the-flywheel-works"
+  status = 301
+  force = true
+
+# === end canonical-blog redirects ===
